@@ -13,14 +13,24 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <Logos />
-      <ContentSectionOne />
-      <ContentSections />
-      <ComplianceSection />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
+      <section id="home">
+        <Hero />
+        <Logos />
+      </section>
+      <section id="features">
+        <ContentSectionOne />
+        <ContentSections />
+        <ComplianceSection />
+      </section>
+      <section id="solutions">
+        <Testimonials />
+      </section>
+      <section id="resources">
+        <FAQ />
+      </section>
+      <section id="pricing">
+        <Pricing />
+      </section>
       <Footer />
     </>
   );

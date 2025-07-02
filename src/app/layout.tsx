@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-black text-white font-sans">{children}</body>
+      <body className="bg-white text-white font-sans">{children}</body>
     </html>
   );
 }
