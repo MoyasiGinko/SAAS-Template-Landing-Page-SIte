@@ -88,12 +88,17 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 // Reusable PricingCard component
-const PricingCard: React.FC<PricingCardProps> = ({ plan, displayPrice, displayPeriod, getButtonClasses }) => {
+const PricingCard: React.FC<PricingCardProps> = ({
+  plan,
+  displayPrice,
+  displayPeriod,
+  getButtonClasses,
+}) => {
   return (
     <div
-      className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 relative border border-gray-200"
+      className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 relative border border-gray-200 flex flex-col h-full"
     >
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
         <div className="mb-6">
           <span className={`text-4xl font-bold ${plan.id === 'enterprise' ? 'text-purple-400' : 'text-gray-900'}`}>
@@ -118,9 +123,17 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, displayPrice, displayPe
           </ul>
         </div>
 
-        <button className={getButtonClasses(plan.buttonStyle)}>
-          {plan.buttonText}
-        </button>
+        <div className="mt-auto">
+          <button
+            className={
+              plan.isFeatured
+                ? "w-full py-3 px-4 bg-white text-purple-700 border-2 border-purple-500 rounded-lg font-semibold shadow-lg hover:bg-purple-600 hover:text-white hover:border-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 transition-all duration-200"
+                : "w-full py-3 px-4 bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-semibold hover:bg-gray-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-all duration-200"
+            }
+          >
+            {plan.buttonText}
+          </button>
+        </div>
       </div>
     </div>
   );
