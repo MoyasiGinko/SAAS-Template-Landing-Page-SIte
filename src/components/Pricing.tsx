@@ -172,48 +172,56 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-8">
         {/* Header with extra top spacing */}
         <div className="text-center mb-12 pt-8">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-              <div className="w-4 h-4 bg-white rounded"></div>
+            <div className="flex items-center justify-center mb-6">
+            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3 shadow">
+              <svg className="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path d="M12 3v18m9-9H3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <span className="text-black font-medium">Pricing</span>
-          </div>
+            <span className="text-xl font-semibold text-purple-700 tracking-wide">Pricing</span>
+            </div>
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             5M+ users and still counting
           </h2>
-          <p className="text-purple-100 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
             Start free and upgrade anytime as your team and projects grow
           </p>
           
-          {/* Monthly/Annual Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-12">
-            <span className={`font-medium transition-colors ${!isAnnual ? 'text-black' : 'text-purple-200'}`}>
+            {/* Monthly/Annual Toggle */}
+            <div className="flex items-center justify-center mb-12 relative">
+              <span className={`font-medium transition-colors ${!isAnnual ? 'text-black' : 'text-gray-400'}`}>
               Monthly
-            </span>
-            <button
+              </span>
+              <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative w-14 h-7 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-500 ${
-                isAnnual ? 'bg-white' : 'bg-white/30'
+              className={`relative w-14 h-7 mx-4 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 focus:ring-offset-purple-500 ${
+                isAnnual ? 'bg-purple-100' : 'bg-gray-200'
               }`}
-            >
+              >
               <div
                 className={`absolute top-1 w-5 h-5 rounded-full shadow-md transition-transform duration-200 ${
-                  isAnnual ? 'transform translate-x-7 left-1 bg-purple-500' : 'left-1 bg-white'
+                isAnnual
+                  ? 'transform translate-x-7 left-1 bg-purple-500'
+                  : 'left-1 bg-white'
                 }`}
               />
-            </button>
-            <div className="flex items-center space-x-2">
-              <span className={`font-medium transition-colors ${isAnnual ? 'text-black' : 'text-purple-200'}`}>
+              </button>
+              <div className="relative flex items-center">
+              <span className={`font-medium transition-colors ${isAnnual ? 'text-black' : 'text-gray-400'}`}>
                 Annual
               </span>
               {isAnnual && (
-                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">
-                  Save 20%
+                <span
+                className="absolute left-24  -translate-x-1/2 bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full whitespace-nowrap shadow transition-opacity duration-200 opacity-100"
+                style={{ minWidth: '70px', textAlign: 'center' }}
+                >
+                Save 20%
                 </span>
               )}
+              </div>
             </div>
-          </div>
         </div>
+
 
         {/* Pricing Cards Container with 2px spacing on sides */}
         <div className="px-0.5">
