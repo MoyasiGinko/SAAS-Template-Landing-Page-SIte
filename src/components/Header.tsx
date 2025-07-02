@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -53,12 +54,18 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center space-x-3">
-          <button className="hidden lg:inline-block text-gray-700 font-medium px-5 py-2.5 rounded-md hover:bg-gray-50 transition-all duration-200">
+          <Link 
+            href="/login"
+            className="hidden lg:inline-block text-gray-700 font-medium px-5 py-2.5 rounded-md hover:bg-gray-50 transition-all duration-200"
+          >
             Log In
-          </button>
-          <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2.5 rounded-md font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5">
+          </Link>
+          <Link 
+            href="/schedule-demo"
+            className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2.5 rounded-md font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
+          >
             Schedule A Demo
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -104,9 +111,12 @@ export default function Header() {
               </button>
             ))}
             <div className="pt-4 border-t border-gray-100 mt-4">
-              <button className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200">
+              <Link 
+                href="/login"
+                className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
+              >
                 Log In
-              </button>
+              </Link>
             </div>
           </div>
         </div>
