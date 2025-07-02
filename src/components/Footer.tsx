@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       {/* Call to Action Section */}
       <section className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-400 relative overflow-hidden">
         {/* Background decorative elements */}
@@ -53,7 +53,7 @@ export default function Footer() {
       {/* Footer Section with Glass Effect - Overlapping */}
       <footer className="relative -mt-32 z-20">
         <div className="mx-8 lg:mx-16">
-          <div className="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden">
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden">
             <div className="p-8 lg:p-12">
               <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
