@@ -2,10 +2,8 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Logos from "../components/Logos";
 import ContentSectionOne from "../components/ContentSectionOne";
-import ContentSectionTwo from "../components/ContentSectionTwo";
-import ContentSectionThree from "../components/ContentSectionThree";
-import ContentSectionFour from "../components/ContentSectionFour";
-import ContentSectionFive from "../components/ContentSectionFive";
+import ContentSections from "../components/ContentSections";
+import ComplianceSection from "../components/ComplianceSection";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
@@ -18,10 +16,8 @@ export default function Home() {
       <Hero />
       <Logos />
       <ContentSectionOne />
-      <ContentSectionTwo />
-      <ContentSectionThree />
-      <ContentSectionFour />
-      <ContentSectionFive />
+      <ContentSections />
+      <ComplianceSection />
       <Testimonials />
       <Pricing />
       <FAQ />
