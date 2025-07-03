@@ -29,7 +29,7 @@ export default function ScheduleDemoPage() {
     e.preventDefault();
     // Handle demo scheduling logic here
     console.log("Demo scheduled:", formData);
-    alert("Thank you! We'll contact you soon to confirm your demo appointment.");
+    alert("Thank you! We&apos;ll contact you soon to confirm your demo appointment.");
   };
 
   return (
@@ -68,7 +68,7 @@ export default function ScheduleDemoPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">30-minute personalized session</h3>
-                  <p className="text-gray-600">Get a tailored walkthrough of Clara's features specific to your business needs.</p>
+                  <p className="text-gray-600">Get a tailored walkthrough of Clara&apos;s features specific to your business needs.</p>
                 </div>
               </div>
 

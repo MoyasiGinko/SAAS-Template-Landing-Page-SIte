@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -76,10 +77,13 @@ export default function Hero() {
             </div>
           <div className="relative z-10 w-full flex justify-center">
             <div className="rounded-2xl overflow-hidden bg-transparent max-w-7xl w-full aspect-[16/9] flex items-center justify-center">
-              <img
-          src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif"
-          alt="Product demo"
-          className="w-full h-full object-contain"
+              <Image
+                src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif"
+                alt="Product demo"
+                width={1200}
+                height={675}
+                className="w-full h-full object-contain"
+                unoptimized
               />
             </div>
           </div>

@@ -19,7 +19,6 @@ interface PricingCardProps {
   plan: PricingPlan;
   displayPrice: string;
   displayPeriod: string;
-  getButtonClasses: (style: string) => string;
 }
 
 const pricingPlans: PricingPlan[] = [
@@ -92,7 +91,6 @@ const PricingCard: React.FC<PricingCardProps> = ({
   plan,
   displayPrice,
   displayPeriod,
-  getButtonClasses,
 }) => {
   return (
     <div
@@ -153,18 +151,6 @@ export default function Pricing() {
   const getPeriod = (plan: PricingPlan) => {
     if (plan.id === 'enterprise') return plan.period;
     return isAnnual ? 'Per user/year' : plan.period;
-  };
-
-  const getButtonClasses = (style: string) => {
-    switch (style) {
-      case "primary":
-        return "w-full py-3 px-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors";
-      case "purple":
-        return "w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-purple-600 transition-all duration-200 shadow-lg";
-      case "secondary":
-      default:
-        return "w-full py-3 px-4 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors";
-    }
   };
 
   return (
@@ -241,7 +227,6 @@ export default function Pricing() {
               plan={plan}
               displayPrice={getPrice(plan)}
               displayPeriod={getPeriod(plan)}
-              getButtonClasses={getButtonClasses}
             />
           </div>
               ) : (
@@ -250,7 +235,6 @@ export default function Pricing() {
             plan={plan}
             displayPrice={getPrice(plan)}
             displayPeriod={getPeriod(plan)}
-            getButtonClasses={getButtonClasses}
           />
               )
             )}

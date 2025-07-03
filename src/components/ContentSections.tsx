@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const contentCards = [
   {
@@ -59,9 +60,11 @@ export default function ContentSections() {
                 {/* Image Content */}
                 <div className="lg:w-1/2 p-8 lg:p-12">
                   <div className="relative">
-                    <img
+                    <Image
                       src={card.image}
                       alt={card.title}
+                      width={400}
+                      height={320}
                       className="w-full h-64 lg:h-80 object-cover rounded-xl shadow-lg"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>

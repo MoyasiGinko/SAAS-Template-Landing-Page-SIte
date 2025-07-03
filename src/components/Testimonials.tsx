@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -149,7 +150,7 @@ export default function Testimonials() {
                 Honest review from best users
               </h2>
               <p className="text-gray-600 text-lg">
-                Our users are our best ambassadors, discover why we're the top choice
+                Our users are our best ambassadors, discover why we&apos;re the top choice
               </p>
             </div>
             
@@ -195,7 +196,7 @@ export default function Testimonials() {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
                   className="px-3"
@@ -204,9 +205,11 @@ export default function Testimonials() {
                   <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300 h-full">
                     {/* Team Image */}
                     <div className="aspect-[4/3] overflow-hidden">
-                      <img
+                      <Image
                         src={testimonial.image}
                         alt={`${testimonial.company} team`}
+                        width={300}
+                        height={225}
                         className="w-full h-full object-cover"
                       />
                     </div>

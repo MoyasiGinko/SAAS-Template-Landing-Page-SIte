@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 
 export default function ContentSectionOne() {
@@ -223,9 +224,11 @@ export default function ContentSectionOne() {
             <div className="md:w-1/2 relative p-8">
               <div className="relative">
                 {/* Two people image - replace with actual image matching the design */}
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Two people collaborating with laptop"
+                  width={800}
+                  height={600}
                   className="w-full h-auto rounded-2xl shadow-lg object-cover"
                   style={{ aspectRatio: '4/3' }}
                 />
