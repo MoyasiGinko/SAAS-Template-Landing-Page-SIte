@@ -1,18 +1,14 @@
 import "./globals.css";
 import { ReactNode } from "react";
+import { LocalizationProvider } from "../lib/LocalizationProvider";
+import LocaleHtmlWrapper from "../components/LocaleHtmlWrapper";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+// ...existing code...
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-white text-white font-sans">{children}</body>
-    </html>
+    <LocalizationProvider>
+      <LocaleHtmlWrapper>{children}</LocaleHtmlWrapper>
+    </LocalizationProvider>
   );
 }

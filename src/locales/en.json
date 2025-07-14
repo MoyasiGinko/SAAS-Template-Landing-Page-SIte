@@ -1,0 +1,130 @@
+{
+  "header": {
+    "logo": "CLARA",
+    "navigation": {
+      "home": "Home",
+      "features": "Features",
+      "solutions": "Solutions",
+      "resources": "Resources",
+      "pricing": "Pricing"
+    },
+    "actions": {
+      "login": "Log In",
+      "scheduleDemo": "Schedule A Demo"
+    }
+  },
+  "footer": {
+    "callToAction": {
+      "heading": "Know More, Act Faster And\nClose Smarter.",
+      "subheading": "AI-powered clarity for every stage of your customer journey",
+      "getStarted": "Get Started",
+      "scheduleDemo": "Schedule A Demo"
+    },
+    "logo": "CLARA",
+    "tagline": "Every Customer Insights,\nIntelligently Handled",
+    "features": "Features",
+    "company": "Company",
+    "stayInTouch": "Stay in touch",
+    "featuresList": [
+      "Clara feed",
+      "Smart summary",
+      "Pulse Score",
+      "Touchpoint Reminder",
+      "Clara Snapshot"
+    ],
+    "companyList": ["About us", "Careers", "Contact Us", "Feature"],
+    "stayInTouchList": ["Instagram", "Facebook", "Twitter", "Youtube"],
+    "copyright": "Copyright 2025. All rights reserved by Clara",
+    "privacyPolicy": "Privacy policy",
+    "termsAndCondition": "Terms and condition"
+  },
+  "hero": {
+    "badge": "Instant CRM AI Tools",
+    "headline": "Every Customer Insights,\nIntelligently Handled",
+    "description": "Give your team the clarity, context, and speed they need to deliver extraordinary experiences — at every touchpoint",
+    "getStarted": "Get Started"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "5M+ users and still counting",
+    "description": "Start free and upgrade anytime as your team and projects grow",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save20": "Save 20%",
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "description": "For personal",
+        "features": [
+          "2 User Seat Only",
+          "Basic Activity Feed (7-Day History)",
+          "AI Smart Summary (Limited Context)",
+          "Basic Email Tracking"
+        ],
+        "buttonText": "Free Access"
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "description": "For growing teams",
+        "features": [
+          "Up To 10 Users",
+          "Smart Summary + Pulse Score",
+          "Touchpoint Reminder",
+          "Outreach Sequence"
+        ],
+        "buttonText": "Get Started"
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "description": "For multi-user teams",
+        "features": [
+          "Unlimited Users",
+          "Clara Snapshot",
+          "AI Suggestion Engine",
+          "Advanced Scheduling Assistant"
+        ],
+        "buttonText": "Get Started",
+        "badge": "Users best choice !"
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "description": "For large teams",
+        "features": [
+          "Fields & Data Model",
+          "Various Integrations",
+          "Custom Insight AI Training",
+          "SLA, Onboarding, And Permissions"
+        ],
+        "buttonText": "Talk to sales"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "heading": "Everything You’re Wondering, Answered.",
+    "message": "Couldn’t Find Something? ",
+    "messageLink": "Message Us",
+    "questions": [
+      {
+        "question": "How is Clara different from other CRMs",
+        "answer": "Clara doesn’t just store data—it understands it. From summarizing customer interactions to suggesting next steps, Clara is like a co-pilot that helps you move faster with more confidence."
+      },
+      {
+        "question": "Can Clara help my team save time?",
+        "answer": "Yes, Clara automates routine tasks and provides AI-powered insights to help your team focus on what matters most."
+      },
+      {
+        "question": "Is Clara hard to set up?",
+        "answer": "No, Clara is designed for easy integration and quick setup with your existing tools and workflows."
+      },
+      {
+        "question": "What tools does Clara integrate with?",
+        "answer": "Clara integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
+      }
+    ]
+  }
+}

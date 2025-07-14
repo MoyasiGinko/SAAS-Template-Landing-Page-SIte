@@ -2,17 +2,19 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useLocalization } from "../lib/LocalizationProvider";
 
 export default function Header() {
-  const [activeTab, setActiveTab] = useState("Home");
+  const { t, locale, setLocale } = useLocalization();
+  const [activeTab, setActiveTab] = useState(t("header.navigation.home"));
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: "Home", href: "#home" },
-    { name: "Features", href: "#features" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Resources", href: "#resources" },
-    { name: "Pricing", href: "#pricing" }
+    { name: t("header.navigation.home"), href: "#home" },
+    { name: t("header.navigation.features"), href: "#features" },
+    { name: t("header.navigation.solutions"), href: "#solutions" },
+    { name: t("header.navigation.resources"), href: "#resources" },
+    { name: t("header.navigation.pricing"), href: "#pricing" },
   ];
 
   const handleTabClick = (tabName: string, href: string) => {
@@ -20,8 +22,12 @@ export default function Header() {
     // Smooth scroll to section
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const toggleLocale = () => {
+    setLocale(locale === "en" ? "ar" : "en");
   };
 
   return (
@@ -32,7 +38,9 @@ export default function Header() {
           <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-500 rounded-md flex items-center justify-center shadow-sm">
             <span className="font-bold text-lg text-white">C</span>
           </div>
-          <span className="font-bold text-2xl text-gray-900 tracking-tight">CLARA</span>
+          <span className="font-bold text-2xl text-gray-900 tracking-tight">
+            {t("header.logo")}
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -54,18 +62,27 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center space-x-3">
-          <Link 
+          <Link
             href="/login"
             className="hidden lg:inline-block text-gray-700 font-medium px-5 py-2.5 rounded-md hover:bg-gray-50 transition-all duration-200"
           >
-            Log In
+            {t("header.actions.login")}
           </Link>
-          <Link 
+          <Link
             href="/schedule-demo"
             className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2.5 rounded-md font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
           >
-            Schedule A Demo
+            {t("header.actions.scheduleDemo")}
           </Link>
+
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLocale}
+            className="ml-4 px-3 py-1 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-100 transition"
+            aria-label="Toggle Language"
+          >
+            {locale === "en" ? "عربي" : "EN"}
+          </button>
 
           {/* Mobile Menu Button */}
           <button
@@ -81,9 +98,19 @@ export default function Header() {
               viewBox="0 0 24 24"
             >
               {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -111,11 +138,11 @@ export default function Header() {
               </button>
             ))}
             <div className="pt-4 border-t border-gray-100 mt-4">
-              <Link 
+              <Link
                 href="/login"
                 className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
               >
-                Log In
+                {t("header.actions.login")}
               </Link>
             </div>
           </div>
