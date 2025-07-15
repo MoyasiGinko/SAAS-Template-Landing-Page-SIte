@@ -22,7 +22,7 @@ export default function LocaleHtmlWrapper({
       dir={locale === "ar" ? "rtl" : "ltr"}
       className={inter.variable}
     >
-      <body className="bg-white text-white font-sans">{children}</body>
+      <body className="bg-black text-gray-100 font-sans">{children}</body>
     </html>
   );
 }

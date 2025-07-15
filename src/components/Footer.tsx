@@ -7,47 +7,47 @@ export default function Footer() {
   const { t } = useLocalization();
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-black">
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-400 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-black via-gray-950 to-indigo-950 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0">
           {/* Decorative lines and shapes */}
-          <div className="absolute top-10 left-1/4 w-32 h-px bg-white/20 rotate-45"></div>
-          <div className="absolute top-20 right-1/3 w-24 h-px bg-white/20 -rotate-45"></div>
-          <div className="absolute bottom-20 left-1/3 w-40 h-px bg-white/20 rotate-12"></div>
+          <div className="absolute top-10 left-1/4 w-32 h-px bg-indigo-400/20 rotate-45"></div>
+          <div className="absolute top-20 right-1/3 w-24 h-px bg-indigo-400/20 -rotate-45"></div>
+          <div className="absolute bottom-20 left-1/3 w-40 h-px bg-indigo-400/20 rotate-12"></div>
 
           {/* Decorative circles */}
-          <div className="absolute top-16 right-1/4 w-2 h-2 bg-white/30 rounded-full"></div>
-          <div className="absolute bottom-32 left-1/5 w-3 h-3 bg-white/20 rounded-full"></div>
-          <div className="absolute top-32 left-1/2 w-1 h-1 bg-white/40 rounded-full"></div>
+          <div className="absolute top-16 right-1/4 w-2 h-2 bg-indigo-300/30 rounded-full"></div>
+          <div className="absolute bottom-32 left-1/5 w-3 h-3 bg-indigo-400/20 rounded-full"></div>
+          <div className="absolute top-32 left-1/2 w-1 h-1 bg-indigo-200/40 rounded-full"></div>
 
           {/* Main decorative star/cross in top right */}
           <div className="absolute top-8 right-16">
             <div className="relative">
-              <div className="w-4 h-px bg-white/50"></div>
-              <div className="w-px h-4 bg-white/50 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="w-4 h-px bg-indigo-200/50"></div>
+              <div className="w-px h-4 bg-indigo-200/50 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
             </div>
           </div>
         </div>
 
-        <div className="relative z-10 text-white py-20 px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-normal mb-6 leading-tight">
-            {t("footer.callToAction.heading").split("\\n").map((line, idx) => (
+        <div className="relative z-10 text-gray-100 py-20 px-8 text-center">
+          <h2 className="text-4xl lg:text-5xl font-normal mb-6 leading-tight text-white">
+            {t("footer.callToAction.heading").split("\n").map((line: string, idx: number) => (
               <React.Fragment key={idx}>
                 {line}
                 <br />
               </React.Fragment>
             ))}
           </h2>
-          <p className="mb-10 text-lg text-white/90">
+          <p className="mb-10 text-lg text-gray-300">
             {t("footer.callToAction.subheading")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-all duration-200 shadow-lg">
+            <button className="bg-indigo-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-600 transition-all duration-200 shadow-lg">
               {t("footer.callToAction.getStarted")}
             </button>
-            <button className="bg-purple-800/80 backdrop-blur-sm text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-800 transition-all duration-200 border border-purple-700/50">
+            <button className="bg-black/70 backdrop-blur-sm text-indigo-200 px-8 py-3 rounded-lg font-medium hover:bg-indigo-900 transition-all duration-200 border border-indigo-700/50">
               {t("footer.callToAction.scheduleDemo")}
             </button>
           </div>
@@ -60,20 +60,20 @@ export default function Footer() {
       {/* Footer Section with Glass Effect - Overlapping */}
       <footer className="relative -mt-32 z-20">
         <div className="mx-8 lg:mx-16">
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden">
+          <div className="bg-black/80 backdrop-blur-xl rounded-3xl border border-indigo-900/40 shadow-2xl overflow-hidden">
             <div className="p-8 lg:p-12">
               <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
                   {/* Logo and tagline */}
                   <div className="lg:w-1/3">
                     <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mr-3">
+                      <div className="w-10 h-10 bg-indigo-700 rounded-lg flex items-center justify-center mr-3">
                         <span className="text-white font-bold text-lg">C</span>
                       </div>
-                      <span className="text-gray-800 text-2xl font-bold">{t("footer.logo")}</span>
+                      <span className="text-gray-100 text-2xl font-bold">{t("footer.logo")}</span>
                     </div>
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {t("footer.tagline").split("\\n").map((line, idx) => (
+                    <p className="text-gray-400 text-lg leading-relaxed">
+                      {t("footer.tagline").split("\n").map((line: string, idx: number) => (
                         <React.Fragment key={idx}>
                           {line}
                           <br />
@@ -87,11 +87,11 @@ export default function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {/* Features */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-800">{t("footer.features")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.features")}</h4>
                         <ul className="space-y-3 text-sm">
                           {t("footer.featuresList").map((item: string, idx: number) => (
                             <li key={idx}>
-                              <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">{item}</a>
+                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
                             </li>
                           ))}
                         </ul>
@@ -99,11 +99,11 @@ export default function Footer() {
 
                       {/* Company */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-800">{t("footer.company")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.company")}</h4>
                         <ul className="space-y-3 text-sm">
                           {t("footer.companyList").map((item: string, idx: number) => (
                             <li key={idx}>
-                              <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">{item}</a>
+                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
                             </li>
                           ))}
                         </ul>
@@ -111,11 +111,11 @@ export default function Footer() {
 
                       {/* Stay in touch */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-800">{t("footer.stayInTouch")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.stayInTouch")}</h4>
                         <ul className="space-y-3 text-sm">
                           {t("footer.stayInTouchList").map((item: string, idx: number) => (
                             <li key={idx}>
-                              <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors">{item}</a>
+                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
                             </li>
                           ))}
                         </ul>
@@ -125,13 +125,13 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom copyright section */}
-                <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="mt-12 pt-8 border-t border-indigo-900/40 flex flex-col md:flex-row justify-between items-center gap-4">
                   <div className="text-gray-500 text-sm">
                     {t("footer.copyright")}
                   </div>
                   <div className="flex gap-6 text-sm">
-                    <a href="#" className="text-gray-500 hover:text-purple-600 transition-colors">{t("footer.privacyPolicy")}</a>
-                    <a href="#" className="text-gray-500 hover:text-purple-600 transition-colors">{t("footer.termsAndCondition")}</a>
+                    <a href="#" className="text-gray-500 hover:text-indigo-400 transition-colors">{t("footer.privacyPolicy")}</a>
+                    <a href="#" className="text-gray-500 hover:text-indigo-400 transition-colors">{t("footer.termsAndCondition")}</a>
                   </div>
                 </div>
               </div>

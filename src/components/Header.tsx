@@ -31,20 +31,20 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+    <header className="w-full bg-gradient-to-b from-black via-gray-950 to-indigo-950/90 backdrop-blur-sm border-b border-indigo-900 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-500 rounded-md flex items-center justify-center shadow-sm">
-            <span className="font-bold text-lg text-white">C</span>
+          <div className="w-10 h-10 bg-gradient-to-r from-indigo-900 to-purple-900 rounded-md flex items-center justify-center shadow-lg">
+            <span className="font-bold text-lg text-indigo-200">C</span>
           </div>
-          <span className="font-bold text-2xl text-gray-900 tracking-tight">
+          <span className="font-bold text-2xl text-indigo-100 tracking-tight">
             {t("header.logo")}
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-1 bg-gray-50/80 rounded-lg px-2 py-1 border border-gray-200/60 shadow-sm">
+        <nav className="hidden lg:flex items-center space-x-1 bg-gray-900/80 rounded-lg px-2 py-1 border border-indigo-900 shadow-md">
           {navigationItems.map((item) => (
             <button
               key={String(item.name)}
@@ -53,8 +53,8 @@ export default function Header() {
               }
               className={`px-5 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ${
                 activeTab === item.name
-                  ? "bg-white text-gray-900 shadow-sm border border-gray-200/60"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
+                  ? "bg-gradient-to-r from-indigo-800 to-purple-800 text-white shadow border border-indigo-700"
+                  : "text-indigo-200 hover:text-white hover:bg-indigo-900/60"
               }`}
             >
               {item.name}
@@ -70,22 +70,22 @@ export default function Header() {
             onClick={toggleLocale}
             className={`ml-4 relative w-14 h-8 rounded-full flex items-center transition-colors duration-300 focus:outline-none border-2 ${
               locale === "en"
-                ? "bg-gray-100 border-purple-500/50"
-                : "bg-gray-100 border-blue-400/50"
+                ? "bg-gray-900 border-purple-700/70"
+                : "bg-gray-900 border-blue-700/70"
             }`}
             aria-label="Toggle Language"
           >
             <span
               className={`absolute top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full shadow flex items-center justify-center text-xs font-bold transition-transform duration-300 ${
                 locale === "en"
-                  ? "left-1 bg-white text-purple-700"
-                  : "right-1 bg-white text-blue-700"
+                  ? "left-1 bg-indigo-950 text-purple-300"
+                  : "right-1 bg-indigo-950 text-blue-300"
               }`}
               style={{
                 boxShadow:
                   locale === "en"
-                    ? "0 2px 8px 0 rgba(139,92,246,0.15)"
-                    : "0 2px 8px 0 rgba(59,130,246,0.15)",
+                    ? "0 2px 8px 0 rgba(139,92,246,0.25)"
+                    : "0 2px 8px 0 rgba(59,130,246,0.25)",
               }}
             >
               {locale === "en" ? "EN" : "AR"}
@@ -94,26 +94,26 @@ export default function Header() {
 
           <Link
             href="/login"
-            className="hidden lg:inline-block text-gray-700 font-medium px-5 py-2.5 rounded-md hover:bg-gray-50 transition-all duration-200"
+            className="hidden lg:inline-block text-indigo-200 font-medium px-5 py-2.5 rounded-md hover:bg-indigo-900/60 hover:text-white transition-all duration-200"
           >
             {t("header.actions.login")}
           </Link>
           <Link
             href="/schedule-demo"
-            className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-2.5 rounded-md font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
+            className="bg-gradient-to-r from-indigo-800 to-purple-800 text-white px-6 py-2.5 rounded-md font-medium shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {t("header.actions.scheduleDemo")}
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-md hover:bg-gray-50 transition-colors"
+            className="lg:hidden p-2 rounded-md hover:bg-indigo-900/60 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             title={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             <svg
-              className={`w-6 h-6 text-gray-600 transition-transform duration-200 ${
+              className={`w-6 h-6 text-indigo-200 transition-transform duration-200 ${
                 isMobileMenuOpen ? "rotate-45" : ""
               }`}
               fill="none"
@@ -142,7 +142,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div className="lg:hidden bg-gray-950 border-t border-indigo-900 shadow-lg">
           <div className="px-6 py-4 space-y-2">
             {navigationItems.map((item) => (
               <button
@@ -153,17 +153,17 @@ export default function Header() {
                 }}
                 className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
                   activeTab === item.name
-                    ? "bg-purple-50 text-purple-700 border border-purple-200"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    ? "bg-gradient-to-r from-indigo-800 to-purple-800 text-white border border-indigo-700"
+                    : "text-indigo-200 hover:text-white hover:bg-indigo-900/60"
                 }`}
               >
                 {item.name}
               </button>
             ))}
-            <div className="pt-4 border-t border-gray-100 mt-4">
+            <div className="pt-4 border-t border-indigo-900 mt-4">
               <Link
                 href="/login"
-                className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
+                className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium text-indigo-200 hover:text-white hover:bg-indigo-900/60 transition-all duration-200"
               >
                 {t("header.actions.login")}
               </Link>

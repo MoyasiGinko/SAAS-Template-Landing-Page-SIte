@@ -7,14 +7,14 @@ import { useLocalization } from "../lib/LocalizationProvider";
 export default function Hero() {
   const { t } = useLocalization();
   return (
-    <section className="bg-white pt-16 pb-12 px-4 border-b border-gray-100">
+    <section className="bg-gradient-to-b from-black via-gray-950 to-indigo-950 pt-16 pb-12 px-4 border-b border-indigo-900">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Headline and CTA */}
         <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-block border border-purple-200 text-purple-700 rounded-full px-4 py-1 text-xs mb-5 font-semibold bg-white shadow-sm tracking-wide">
+          <div className="inline-block border border-indigo-700 text-purple-300 rounded-full px-4 py-1 text-xs mb-5 font-semibold bg-indigo-950 shadow tracking-wide">
             {t("hero.badge")}
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-black leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white leading-tight">
             {(() => {
               const headline = t("hero.headline");
               let lines: string[] = [];
@@ -30,15 +30,14 @@ export default function Hero() {
                 </React.Fragment>
               ));
             })()}
-            <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
-              {/* If headline is split, this is the second line, else fallback */}
-              {/* Already handled above, so this can be removed or used for extra highlight if needed */}
+            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              {/* Optionally highlight a word or phrase here for extra effect */}
             </span>
           </h1>
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+          <p className="text-gray-300 mb-8 text-lg leading-relaxed">
             {t("hero.description")}
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-purple-400 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:from-purple-700 hover:to-purple-500 transition text-base">
+          <button className="bg-gradient-to-r from-indigo-800 to-purple-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:from-indigo-700 hover:to-purple-700 transition text-base">
             {t("hero.getStarted")}
           </button>
         </div>
@@ -48,12 +47,13 @@ export default function Hero() {
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             {/* Grid dots background */}
             <div
-              className="absolute inset-0 w-full h-full invert"
+              className="absolute inset-0 w-full h-full"
               style={{
                 backgroundImage: "url('/grid-dots.svg')",
                 backgroundRepeat: "repeat",
                 backgroundPosition: "center",
-                opacity: 1,
+                opacity: 0.15,
+                filter: "invert(0)",
                 zIndex: 0,
               }}
             />
@@ -62,7 +62,7 @@ export default function Hero() {
               className="absolute left-0 top-0 h-full w-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to right, white 5%, transparent 100%)",
+                  "linear-gradient(to right, #111 5%, transparent 100%)",
                 pointerEvents: "none",
               }}
             />
@@ -71,7 +71,7 @@ export default function Hero() {
               className="absolute right-0 top-0 h-full w-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to left, white 5%, transparent 100%)",
+                  "linear-gradient(to left, #111 5%, transparent 100%)",
                 pointerEvents: "none",
               }}
             />
@@ -80,7 +80,7 @@ export default function Hero() {
               className="absolute top-0 left-0 w-full h-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to bottom, white 5%, transparent 100%)",
+                  "linear-gradient(to bottom, #111 5%, transparent 100%)",
                 pointerEvents: "none",
               }}
             />
@@ -89,7 +89,7 @@ export default function Hero() {
               className="absolute bottom-0 left-0 w-full h-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to top, white 5%, transparent 100%)",
+                  "linear-gradient(to top, #111 5%, transparent 100%)",
                 pointerEvents: "none",
               }}
             />

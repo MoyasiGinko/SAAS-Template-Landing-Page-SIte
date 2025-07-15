@@ -4,14 +4,14 @@ import React from "react";
 
 export default function Logos() {
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto flex justify-center space-x-16 text-gray-300 opacity-50 font-bold text-5xl">
-      <span>CH</span>
-      <span>PLEX</span>
-      <span>TradingView</span>
-      <span>AV</span>
-      <span>MOBLY</span>
-      <span>MOX</span>
+    <section className="py-12 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+      <div className="max-w-7xl mx-auto flex justify-center space-x-16 text-purple-400 opacity-70 font-bold text-5xl">
+        <span>CH</span>
+        <span>PLEX</span>
+        <span>TradingView</span>
+        <span>AV</span>
+        <span>MOBLY</span>
+        <span>MOX</span>
       </div>
     </section>
   );

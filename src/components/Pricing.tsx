@@ -36,29 +36,29 @@ export default function Pricing() {
     displayPeriod,
   }) => {
     return (
-      <div className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 relative border border-gray-200 flex flex-col h-full">
+      <div className="bg-black/80 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 relative border border-indigo-900 flex flex-col h-full">
         <div className="p-6 flex flex-col flex-1">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+          <h3 className="text-xl font-bold text-gray-100 mb-2">{plan.name}</h3>
           <div className="mb-6">
             <span
               className={`text-4xl font-bold ${
-                plan.id === "enterprise" ? "text-purple-400" : "text-gray-900"
+                plan.id === "enterprise" ? "text-indigo-400" : "text-gray-100"
               }`}
             >
               {displayPrice}
             </span>
-            <span className="text-gray-500 ml-2">{displayPeriod}</span>
+            <span className="text-gray-400 ml-2">{displayPeriod}</span>
           </div>
 
           <div className="mb-6">
-            <p className="font-semibold mb-4 text-gray-900">
+            <p className="font-semibold mb-4 text-gray-200">
               {plan.description}
             </p>
             <ul className="space-y-3">
               {plan.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
                   <svg
-                    className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                    className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -68,7 +68,7 @@ export default function Pricing() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-600 text-sm">{feature}</span>
+                  <span className="text-gray-300 text-sm">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -78,8 +78,8 @@ export default function Pricing() {
             <button
               className={
                 plan.isFeatured
-                  ? "w-full py-3 px-4 bg-white text-purple-700 border-2 border-purple-500 rounded-lg font-semibold shadow-lg hover:bg-purple-600 hover:text-white hover:border-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 transition-all duration-200"
-                  : "w-full py-3 px-4 bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-semibold hover:bg-gray-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-all duration-200"
+                  ? "w-full py-3 px-4 bg-indigo-500 text-white border-2 border-indigo-400 rounded-lg font-semibold shadow-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 transition-all duration-200"
+                  : "w-full py-3 px-4 bg-gray-900 text-gray-100 border border-indigo-900 rounded-lg font-semibold hover:bg-gray-800 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-offset-2 transition-all duration-200"
               }
             >
               {plan.buttonText}
@@ -103,14 +103,14 @@ export default function Pricing() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header with extra top spacing */}
         <div className="text-center mb-12 pt-8">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3 shadow">
+            <div className="w-10 h-10 bg-indigo-900 rounded-lg flex items-center justify-center mr-3 shadow">
               <svg
-                className="w-6 h-6 text-purple-500"
+                className="w-6 h-6 text-indigo-400"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -123,14 +123,14 @@ export default function Pricing() {
                 />
               </svg>
             </div>
-            <span className="text-xl font-semibold text-purple-700 tracking-wide">
+            <span className="text-xl font-semibold text-indigo-300 tracking-wide">
               {t("pricing.title")}
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t("pricing.subtitle")}
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
             {t("pricing.description")}
           </p>
 
@@ -138,15 +138,15 @@ export default function Pricing() {
           <div className="flex items-center justify-center mb-12 relative">
             <span
               className={`font-medium transition-colors ${
-                !isAnnual ? "text-black" : "text-gray-400"
+                !isAnnual ? "text-white" : "text-gray-500"
               }`}
             >
               {t("pricing.monthly")}
             </span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative w-14 h-7 mx-4 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 focus:ring-offset-purple-500 ${
-                isAnnual ? "bg-purple-100" : "bg-gray-200"
+              className={`relative w-14 h-7 mx-4 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-black ${
+                isAnnual ? "bg-indigo-900" : "bg-gray-800"
               }`}
               title={
                 isAnnual
@@ -162,22 +162,22 @@ export default function Pricing() {
               <div
                 className={`absolute top-1 w-5 h-5 rounded-full shadow-md transition-transform duration-200 ${
                   isAnnual
-                    ? "transform translate-x-7 left-1 bg-purple-500"
-                    : "left-1 bg-white"
+                    ? "transform translate-x-7 left-1 bg-indigo-400"
+                    : "left-1 bg-black"
                 }`}
               />
             </button>
             <div className="relative flex items-center">
               <span
                 className={`font-medium transition-colors ${
-                  isAnnual ? "text-black" : "text-gray-400"
+                  isAnnual ? "text-white" : "text-gray-500"
                 }`}
               >
                 {t("pricing.annual")}
               </span>
               {isAnnual && (
                 <span
-                  className="absolute left-24  -translate-x-1/2 bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full whitespace-nowrap shadow transition-opacity duration-200 opacity-100"
+                  className="absolute left-24  -translate-x-1/2 bg-green-900 text-green-200 text-xs font-semibold px-2 py-1 rounded-full whitespace-nowrap shadow transition-opacity duration-200 opacity-100"
                   style={{ minWidth: "70px", textAlign: "center" }}
                 >
                   {t("pricing.save20")}
@@ -193,13 +193,13 @@ export default function Pricing() {
             {pricingPlans.map((plan) =>
               plan.isFeatured ? (
                 <div
-                  className="bg-gradient-to-br from-purple-600 via-purple-500 to-purple-400 rounded-2xl relative flex flex-col items-center p-1"
+                  className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 rounded-2xl relative flex flex-col items-center p-1"
                   key={plan.id}
                 >
                   {/* Featured Badge */}
                   {plan.badge && (
                     <div className="mb-1">
-                      <span className="text-white text-sm font-semibold shadow-lg">
+                      <span className="text-indigo-100 text-sm font-semibold shadow-lg">
                         {plan.badge}
                       </span>
                     </div>

@@ -6,17 +6,17 @@ import { useLocalization } from "../lib/LocalizationProvider";
 export default function ComplianceSection() {
   const { t } = useLocalization();
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12">
           {/* Left Content */}
           <div className="lg:w-1/2">
-            <h2 className="text-2xl lg:text-3xl font-normal text-gray-900 mb-6 leading-relaxed">
+            <h2 className="text-2xl lg:text-3xl font-normal text-gray-100 mb-6 leading-relaxed">
               {t("complianceSection.heading1")}
               <br />
               {t("complianceSection.heading2")}
             </h2>
-            <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5">
+            <button className="bg-gradient-to-r from-indigo-800 to-purple-800 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5">
               {t("complianceSection.getStarted")}
             </button>
           </div>
@@ -25,7 +25,7 @@ export default function ComplianceSection() {
           <div className="lg:w-1/2 flex items-center justify-center lg:justify-end gap-8">
             {/* GDPR Badge */}
             <div className="flex flex-col items-center space-y-1 w-24">
-              <div className="w-20 h-20 bg-white rounded-full border border-gray-200 shadow-sm flex items-center justify-center mb-2">
+              <div className="w-20 h-20 bg-gray-900 rounded-full border border-indigo-900 shadow-sm flex items-center justify-center mb-2">
                 <svg
                   width="40"
                   height="40"
@@ -53,14 +53,14 @@ export default function ComplianceSection() {
                   <circle cx="20" cy="22" r="2" fill="#fff" />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-blue-600 text-center">
+              <span className="text-xs font-bold text-indigo-400 text-center">
                 {t("complianceSection.gdpr")}
               </span>
             </div>
 
             {/* BSI Badge */}
             <div className="flex flex-col items-center space-y-1 w-24">
-              <div className="w-20 h-20 bg-white rounded-full border border-gray-200 shadow-sm flex items-center justify-center mb-2">
+              <div className="w-20 h-20 bg-gray-900 rounded-full border border-indigo-900 shadow-sm flex items-center justify-center mb-2">
                 <svg
                   width="40"
                   height="40"
@@ -82,14 +82,14 @@ export default function ComplianceSection() {
                   <circle cx="20" cy="20" r="7" fill="#6B7280" />
                 </svg>
               </div>
-              <span className="text-xs text-gray-600 text-center">
+              <span className="text-xs text-gray-300 text-center">
                 {t("complianceSection.iso")}
               </span>
             </div>
 
             {/* CCPA Badge */}
             <div className="flex flex-col items-center space-y-1 w-24">
-              <div className="w-20 h-20 bg-white rounded-full border border-gray-200 shadow-sm flex items-center justify-center mb-2">
+              <div className="w-20 h-20 bg-gray-900 rounded-full border border-indigo-900 shadow-sm flex items-center justify-center mb-2">
                 <svg
                   width="40"
                   height="40"
@@ -109,7 +109,7 @@ export default function ComplianceSection() {
                   />
                 </svg>
               </div>
-              <span className="text-xs font-bold text-gray-700 text-center">
+              <span className="text-xs font-bold text-gray-200 text-center">
                 {t("complianceSection.ccpa")}
               </span>
             </div>

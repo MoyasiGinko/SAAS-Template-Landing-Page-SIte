@@ -34,13 +34,13 @@ const contentCards = [
 export default function ContentSections() {
   const { t } = useLocalization();
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
       <div className="max-w-7xl mx-auto px-8">
         <div className="space-y-16">
           {contentCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-gray-900 rounded-2xl border border-indigo-900 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               <div
                 className={`flex flex-col ${
@@ -51,15 +51,15 @@ export default function ContentSections() {
               >
                 {/* Text Content */}
                 <div className="lg:w-1/2 p-8 lg:p-12">
-                  <h3 className="text-3xl lg:text-4xl font-semibold mb-6 text-gray-900">
+                  <h3 className="text-3xl lg:text-4xl font-semibold mb-6 text-gray-100">
                     {t(card.titleKey)}
                   </h3>
-                  <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+                  <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                     {t(card.descriptionKey)}
                   </p>
                   <a
                     href="#"
-                    className="inline-flex items-center text-black font-semibold hover:text-purple-600 transition-colors duration-200 group"
+                    className="inline-flex items-center text-indigo-300 font-semibold hover:text-purple-400 transition-colors duration-200 group"
                   >
                     {t("contentSections.readMore")}
                     <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
@@ -76,9 +76,9 @@ export default function ContentSections() {
                       alt={String(t(card.titleKey))}
                       width={400}
                       height={320}
-                      className="w-full h-64 lg:h-80 object-cover rounded-xl shadow-lg"
+                      className="w-full h-64 lg:h-80 object-cover rounded-xl shadow-xl border-2 border-indigo-900"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent rounded-xl"></div>
                   </div>
                 </div>
               </div>

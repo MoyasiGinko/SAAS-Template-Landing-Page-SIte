@@ -168,13 +168,13 @@ export default function ContentSectionOne() {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="relative bg-gradient-to-r from-purple-100 to-purple-200 rounded-3xl overflow-hidden">
+        <div className="relative bg-gradient-to-r from-indigo-950 to-gray-900 rounded-3xl overflow-hidden">
           {/* Animated purple background fill - vibrant purple sweeping animation */}
           <div
             ref={backgroundFillRef}
-            className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500"
+            className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-purple-900"
             style={{
               transformOrigin: "left",
               transform: "scaleX(0.2)",
@@ -186,7 +186,7 @@ export default function ContentSectionOne() {
             {/* Large purple circle - continuously rotating and pulsing */}
             <div
               ref={circle1Ref}
-              className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-80"
+              className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-indigo-800 to-purple-800 rounded-full opacity-60"
               style={{
                 transform: "translate(128px, -128px)",
               }}
@@ -195,32 +195,32 @@ export default function ContentSectionOne() {
             {/* Square rotating block */}
             <div
               ref={rect2Ref}
-              className="absolute bottom-0 left-40 w-32 h-32 bg-purple-400 opacity-60"
+              className="absolute bottom-0 left-40 w-32 h-32 bg-indigo-900 opacity-40"
             />
           </div>
 
           <div className="relative z-10 flex flex-col md:flex-row items-center min-h-[400px]">
             {/* Left content */}
             <div className="md:w-1/2 p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
                 {t("contentSectionOne.heading1")}
                 <br />
                 {t("contentSectionOne.heading2")}
                 <br />
                 {t("contentSectionOne.heading3")}
               </h2>
-              <p className="text-gray-700 mb-6 text-base leading-relaxed max-w-sm">
+              <p className="text-gray-300 mb-6 text-base leading-relaxed max-w-sm">
                 {t("contentSectionOne.description")}
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-gray-900 font-semibold hover:text-purple-700 transition-colors text-sm"
+                className="inline-flex items-center text-indigo-200 font-semibold hover:text-purple-400 transition-colors text-sm"
               >
                 {t("contentSectionOne.moreAboutClara")}
                 <svg
                   className="ml-2 w-4 h-4"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#a78bfa"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -242,7 +242,7 @@ export default function ContentSectionOne() {
                   alt={String(t("contentSectionOne.imageAlt"))}
                   width={800}
                   height={600}
-                  className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                  className="w-full h-auto rounded-2xl shadow-2xl object-cover border-2 border-indigo-900"
                   style={{ aspectRatio: "4/3" }}
                 />
               </div>

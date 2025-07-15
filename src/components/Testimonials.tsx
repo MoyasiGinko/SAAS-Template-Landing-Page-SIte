@@ -98,23 +98,23 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header Section */}
         <div className="mb-16">
           <div className="flex items-center mb-6">
-            <div className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+            <div className="bg-indigo-900 text-indigo-200 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+              <div className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></div>
               {t("testimonials.badge")}
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div className="lg:w-2/3">
-              <h2 className="text-4xl lg:text-5xl font-normal text-gray-900 mb-4 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4 leading-tight">
                 {t("testimonials.heading")}
               </h2>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-300 text-lg">
                 {t("testimonials.subheading")}
               </p>
             </div>
@@ -123,11 +123,11 @@ export default function Testimonials() {
             <div className="flex space-x-2 mt-6 lg:mt-0">
               <button
                 onClick={prevTestimonial}
-                className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+                className="w-10 h-10 bg-gray-900 hover:bg-indigo-900 rounded-full flex items-center justify-center transition-colors duration-200 border border-indigo-800"
                 aria-label="Previous testimonial"
               >
                 <svg
-                  className="w-5 h-5 text-gray-600"
+                  className="w-5 h-5 text-indigo-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -142,11 +142,11 @@ export default function Testimonials() {
               </button>
               <button
                 onClick={nextTestimonial}
-                className="w-10 h-10 bg-gray-900 hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors duration-200"
+                className="w-10 h-10 bg-indigo-900 hover:bg-indigo-800 rounded-full flex items-center justify-center transition-colors duration-200 border border-indigo-800"
                 aria-label="Next testimonial"
               >
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-5 h-5 text-indigo-100"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -189,7 +189,7 @@ export default function Testimonials() {
                   className="px-3"
                   style={{ width: `${100 / testimonials.length}%` }}
                 >
-                  <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300 h-full">
+                  <div className="bg-black/80 rounded-2xl overflow-hidden border border-indigo-900 hover:shadow-xl transition-shadow duration-300 h-full">
                     {/* Team Image */}
                     <div className="aspect-[4/3] overflow-hidden">
                       <Image
@@ -204,25 +204,25 @@ export default function Testimonials() {
                     {/* Content */}
                     <div className="p-6">
                       <div className="mb-4">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-bold text-indigo-100 mb-1">
                           {testimonial.company}
                         </h3>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-indigo-300">
                           {testimonial.website}
                         </p>
                       </div>
 
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                      <h4 className="text-lg font-semibold text-indigo-200 mb-3">
                         {testimonial.title}
                       </h4>
 
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-indigo-300 mb-6 leading-relaxed">
                         {testimonial.description}
                       </p>
 
                       <a
                         href="#"
-                        className="inline-flex items-center text-gray-900 font-medium hover:text-purple-600 transition-colors duration-200 group"
+                        className="inline-flex items-center text-indigo-200 font-medium hover:text-indigo-400 transition-colors duration-200 group"
                       >
                         {t("testimonials.readCaseStudy")}
                         <svg
@@ -247,34 +247,7 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation Arrows */}
-          {/* <button
-            onClick={prevTestimonial}
-            disabled={currentIndex === 0}
-            className={`absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm ${
-              currentIndex === 0
-                ? 'opacity-50 cursor-not-allowed'
-                : 'hover:bg-gray-50 hover:shadow-md'
-            }`}
-            aria-label="Previous testimonial"
-          >
-            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextTestimonial}
-            disabled={currentIndex >= maxIndex}
-            className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm ${
-              currentIndex >= maxIndex
-                ? 'opacity-50 cursor-not-allowed'
-                : 'hover:bg-gray-50 hover:shadow-md'
-            }`}
-            aria-label="Next testimonial"
-          >
-            <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button> */}
+          {/* ...existing code... */}
         </div>
 
         {/* Navigation Dots */}
@@ -285,8 +258,8 @@ export default function Testimonials() {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 index === currentIndex
-                  ? "bg-purple-500"
-                  : "bg-gray-300 hover:bg-gray-400"
+                  ? "bg-indigo-400"
+                  : "bg-indigo-900 hover:bg-indigo-700"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
