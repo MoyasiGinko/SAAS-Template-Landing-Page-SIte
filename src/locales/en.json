@@ -42,7 +42,8 @@
     "badge": "Instant CRM AI Tools",
     "headline": "Every Customer Insights,\nIntelligently Handled",
     "description": "Give your team the clarity, context, and speed they need to deliver extraordinary experiences — at every touchpoint",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "imageAlt": "Product demo"
   },
   "pricing": {
     "title": "Pricing",
@@ -56,6 +57,8 @@
         "id": "starter",
         "name": "Starter",
         "description": "For personal",
+        "price": "0",
+        "period": "per month",
         "features": [
           "2 User Seat Only",
           "Basic Activity Feed (7-Day History)",
@@ -68,6 +71,8 @@
         "id": "growth",
         "name": "Growth",
         "description": "For growing teams",
+        "price": "9",
+        "period": "per month",
         "features": [
           "Up To 10 Users",
           "Smart Summary + Pulse Score",
@@ -80,6 +85,8 @@
         "id": "pro",
         "name": "Pro",
         "description": "For multi-user teams",
+        "price": "29",
+        "period": "per month",
         "features": [
           "Unlimited Users",
           "Clara Snapshot",
@@ -93,6 +100,8 @@
         "id": "enterprise",
         "name": "Enterprise",
         "description": "For large teams",
+        "price": "Custom",
+        "period": "per month",
         "features": [
           "Fields & Data Model",
           "Various Integrations",
@@ -124,6 +133,85 @@
       {
         "question": "What tools does Clara integrate with?",
         "answer": "Clara integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
+      }
+    ]
+  },
+  "contentSectionOne": {
+    "heading1": "The AI Workforce",
+    "heading2": "humans can lean",
+    "heading3": "on.",
+    "description": "Never quits, and always improves. Scale to meet any demand.",
+    "moreAboutClara": "More about clara",
+    "imageAlt": "Two people discussing"
+  },
+  "complianceSection": {
+    "heading1": "Clara meets the highest industry benchmarks—",
+    "heading2": "so your data grows safely with you.",
+    "getStarted": "Get Started",
+    "gdpr": "GDPR",
+    "iso": "ISO 27001",
+    "ccpa": "CCPA"
+  },
+  "contentSections": {
+    "card1": {
+      "title": "Automated Schedule",
+      "description": "Streamline Your Daily Planning with Smart, Automated Scheduling Tools."
+    },
+    "card2": {
+      "title": "Every record, enriched",
+      "description": "From fundraising and location to revenue, employee count, LinkedIn profiles, and more."
+    },
+    "card3": {
+      "title": "Powered by Data Connected",
+      "description": "See all the relevant data about your customer as you interact with them."
+    },
+    "readMore": "Read more"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "heading": "Honest review from best users",
+    "subheading": "Our users are our best ambassadors, discover why we're the top choice",
+    "readCaseStudy": "Read case study",
+    "items": [
+      {
+        "id": 1,
+        "company": "PLEX",
+        "website": "plex.co",
+        "title": "Insight on autopilot.",
+        "description": "Sales and CS now act with clarity—no more digging through activity logs.",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 2,
+        "company": "FARFETCH",
+        "website": "farfetch.io",
+        "title": "Context without Chaos.",
+        "description": "Why farfetch dropped spreadsheets for Clara's unified customer feed.",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 3,
+        "company": "max",
+        "website": "max.ai",
+        "title": "One-click smarter.",
+        "description": "We scaled without increasing team size using Clara's predictive nudges.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 4,
+        "company": "FARFETCH",
+        "website": "farfetch.io",
+        "title": "Context without Chaos.",
+        "description": "Why farfetch dropped spreadsheets for Clara's unified customer feed.",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 5,
+        "company": "max",
+        "website": "max.ai",
+        "title": "One-click smarter.",
+        "description": "We scaled without increasing team size using Clara's predictive nudges.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
       }
     ]
   }

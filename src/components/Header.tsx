@@ -47,8 +47,10 @@ export default function Header() {
         <nav className="hidden lg:flex items-center space-x-1 bg-gray-50/80 rounded-lg px-2 py-1 border border-gray-200/60 shadow-sm">
           {navigationItems.map((item) => (
             <button
-              key={item.name}
-              onClick={() => handleTabClick(item.name, item.href)}
+              key={String(item.name)}
+              onClick={() =>
+                handleTabClick(String(item.name), String(item.href))
+              }
               className={`px-5 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ${
                 activeTab === item.name
                   ? "bg-white text-gray-900 shadow-sm border border-gray-200/60"
@@ -62,6 +64,34 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center space-x-3">
+          {/* Language Switcher */}
+          <button
+            type="button"
+            onClick={toggleLocale}
+            className={`ml-4 relative w-14 h-8 rounded-full flex items-center transition-colors duration-300 focus:outline-none border-2 ${
+              locale === "en"
+                ? "bg-gray-100 border-purple-500/50"
+                : "bg-gray-100 border-blue-400/50"
+            }`}
+            aria-label="Toggle Language"
+          >
+            <span
+              className={`absolute top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full shadow flex items-center justify-center text-xs font-bold transition-transform duration-300 ${
+                locale === "en"
+                  ? "left-1 bg-white text-purple-700"
+                  : "right-1 bg-white text-blue-700"
+              }`}
+              style={{
+                boxShadow:
+                  locale === "en"
+                    ? "0 2px 8px 0 rgba(139,92,246,0.15)"
+                    : "0 2px 8px 0 rgba(59,130,246,0.15)",
+              }}
+            >
+              {locale === "en" ? "EN" : "AR"}
+            </span>
+          </button>
+
           <Link
             href="/login"
             className="hidden lg:inline-block text-gray-700 font-medium px-5 py-2.5 rounded-md hover:bg-gray-50 transition-all duration-200"
@@ -75,19 +105,12 @@ export default function Header() {
             {t("header.actions.scheduleDemo")}
           </Link>
 
-          {/* Language Switcher */}
-          <button
-            onClick={toggleLocale}
-            className="ml-4 px-3 py-1 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-100 transition"
-            aria-label="Toggle Language"
-          >
-            {locale === "en" ? "عربي" : "EN"}
-          </button>
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 rounded-md hover:bg-gray-50 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            title={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             <svg
               className={`w-6 h-6 text-gray-600 transition-transform duration-200 ${
@@ -123,9 +146,9 @@ export default function Header() {
           <div className="px-6 py-4 space-y-2">
             {navigationItems.map((item) => (
               <button
-                key={item.name}
+                key={String(item.name)}
                 onClick={() => {
-                  handleTabClick(item.name, item.href);
+                  handleTabClick(String(item.name), String(item.href));
                   setIsMobileMenuOpen(false);
                 }}
                 className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
