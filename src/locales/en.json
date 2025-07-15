@@ -1,8 +1,8 @@
 {
   "login": {
-    "logo": "CLARA",
+    "logo": "CREATIVE",
     "welcomeBack": "Welcome back",
-    "signInToAccount": "Sign in to your Clara account",
+    "signInToAccount": "Sign in to your CREATIVE account",
     "emailLabel": "Email address",
     "emailPlaceholder": "Enter your email",
     "passwordLabel": "Password",
@@ -18,17 +18,17 @@
     "backToHome": "Back to home"
   },
   "scheduleDemo": {
-    "logo": "CLARA",
+    "logo": "CREATIVE",
     "title": "Schedule Your Personal Demo",
-    "subtitle": "See how Clara can transform your customer insights and accelerate your business growth.",
+    "subtitle": "See how CREATIVE can transform your customer insights and accelerate your business growth.",
     "sessionTitle": "30-minute personalized session",
-    "sessionDesc": "Get a tailored walkthrough of Clara's features specific to your business needs.",
+    "sessionDesc": "Get a tailored walkthrough of CREATIVE's features specific to your business needs.",
     "dataTitle": "Live data insights",
-    "dataDesc": "See real examples of how Clara analyzes customer data and provides actionable insights.",
+    "dataDesc": "See real examples of how CREATIVE analyzes customer data and provides actionable insights.",
     "qaTitle": "Q&A with experts",
-    "qaDesc": "Ask questions and get expert advice on implementing Clara in your workflow.",
+    "qaDesc": "Ask questions and get expert advice on implementing CREATIVE in your workflow.",
     "integrationTitle": "Custom integration plan",
-    "integrationDesc": "Receive a personalized roadmap for integrating Clara with your existing tools.",
+    "integrationDesc": "Receive a personalized roadmap for integrating CREATIVE with your existing tools.",
     "firstNameLabel": "First Name *",
     "firstNamePlaceholder": "John",
     "lastNameLabel": "Last Name *",
@@ -58,7 +58,7 @@
     "time5": "3:00 PM",
     "time6": "4:00 PM",
     "messageLabel": "Tell us about your needs (optional)",
-    "messagePlaceholder": "What challenges are you hoping Clara can help solve?",
+    "messagePlaceholder": "What challenges are you hoping CREATIVE can help solve?",
     "submit": "Schedule Demo",
     "terms1": "By submitting this form, you agree to our",
     "privacyPolicy": "Privacy Policy",
@@ -67,7 +67,7 @@
     "backToHome": "Back to home"
   },
   "header": {
-    "logo": "CLARA",
+    "logo": "CREATIVE",
     "navigation": {
       "home": "Home",
       "features": "Features",
@@ -87,21 +87,21 @@
       "getStarted": "Get Started",
       "scheduleDemo": "Schedule A Demo"
     },
-    "logo": "CLARA",
+    "logo": "CREATIVE",
     "tagline": "Every Customer Insights,\nIntelligently Handled",
     "features": "Features",
     "company": "Company",
     "stayInTouch": "Stay in touch",
     "featuresList": [
-      "Clara feed",
+      "CREATIVE feed",
       "Smart summary",
       "Pulse Score",
       "Touchpoint Reminder",
-      "Clara Snapshot"
+      "CREATIVE Snapshot"
     ],
     "companyList": ["About us", "Careers", "Contact Us", "Feature"],
     "stayInTouchList": ["Instagram", "Facebook", "Twitter", "Youtube"],
-    "copyright": "Copyright 2025. All rights reserved by Clara",
+    "copyright": "Copyright 2025. All rights reserved by CREATIVE",
     "privacyPolicy": "Privacy policy",
     "termsAndCondition": "Terms and condition"
   },
@@ -157,7 +157,7 @@
         "period": "per month",
         "features": [
           "Unlimited Users",
-          "Clara Snapshot",
+          "CREATIVE Snapshot",
           "AI Suggestion Engine",
           "Advanced Scheduling Assistant"
         ],
@@ -187,20 +187,20 @@
     "messageLink": "Message Us",
     "questions": [
       {
-        "question": "How is Clara different from other CRMs",
-        "answer": "Clara doesn’t just store data—it understands it. From summarizing customer interactions to suggesting next steps, Clara is like a co-pilot that helps you move faster with more confidence."
+        "question": "How is CREATIVE different from other CRMs",
+        "answer": "CREATIVE doesn’t just store data—it understands it. From summarizing customer interactions to suggesting next steps, CREATIVE is like a co-pilot that helps you move faster with more confidence."
       },
       {
-        "question": "Can Clara help my team save time?",
-        "answer": "Yes, Clara automates routine tasks and provides AI-powered insights to help your team focus on what matters most."
+        "question": "Can CREATIVE help my team save time?",
+        "answer": "Yes, CREATIVE automates routine tasks and provides AI-powered insights to help your team focus on what matters most."
       },
       {
-        "question": "Is Clara hard to set up?",
-        "answer": "No, Clara is designed for easy integration and quick setup with your existing tools and workflows."
+        "question": "Is CREATIVE hard to set up?",
+        "answer": "No, CREATIVE is designed for easy integration and quick setup with your existing tools and workflows."
       },
       {
-        "question": "What tools does Clara integrate with?",
-        "answer": "Clara integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
+        "question": "What tools does CREATIVE integrate with?",
+        "answer": "CREATIVE integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
       }
     ]
   },
@@ -209,11 +209,11 @@
     "heading2": "humans can lean",
     "heading3": "on.",
     "description": "Never quits, and always improves. Scale to meet any demand.",
-    "moreAboutClara": "More about clara",
+    "moreAboutCREATIVE": "More about CREATIVE",
     "imageAlt": "Two people discussing"
   },
   "complianceSection": {
-    "heading1": "Clara meets the highest industry benchmarks—",
+    "heading1": "CREATIVE meets the highest industry benchmarks—",
     "heading2": "so your data grows safely with you.",
     "getStarted": "Get Started",
     "gdpr": "GDPR",
@@ -254,7 +254,7 @@
         "company": "FARFETCH",
         "website": "farfetch.io",
         "title": "Context without Chaos.",
-        "description": "Why farfetch dropped spreadsheets for Clara's unified customer feed.",
+        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
         "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
       },
       {
@@ -262,7 +262,7 @@
         "company": "max",
         "website": "max.ai",
         "title": "One-click smarter.",
-        "description": "We scaled without increasing team size using Clara's predictive nudges.",
+        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
       },
       {
@@ -270,7 +270,7 @@
         "company": "FARFETCH",
         "website": "farfetch.io",
         "title": "Context without Chaos.",
-        "description": "Why farfetch dropped spreadsheets for Clara's unified customer feed.",
+        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
         "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
       },
       {
@@ -278,7 +278,7 @@
         "company": "max",
         "website": "max.ai",
         "title": "One-click smarter.",
-        "description": "We scaled without increasing team size using Clara's predictive nudges.",
+        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
       }
     ]
