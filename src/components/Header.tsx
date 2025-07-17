@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-gradient-to-b from-black via-gray-950 to-indigo-950/90 backdrop-blur-sm border-b border-indigo-900 sticky top-0 z-50">
+    <header className="w-full bg-transparent backdrop-blur-sm border-b border-indigo-900 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center space-x-3">

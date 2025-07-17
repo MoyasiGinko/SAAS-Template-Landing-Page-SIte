@@ -34,7 +34,7 @@ const contentCards = [
 export default function ContentSections() {
   const { t } = useLocalization();
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         <div className="space-y-16">
           {contentCards.map((card) => (

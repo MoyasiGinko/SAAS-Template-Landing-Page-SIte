@@ -28,27 +28,27 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-transparent flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-500 rounded-md flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-r from-indigo-900 to-indigo-700 rounded-md flex items-center justify-center shadow-lg">
               <span className="font-bold text-xl text-white">C</span>
             </div>
-            <span className="font-bold text-3xl text-gray-900 tracking-tight">
+            <span className="font-bold text-3xl text-indigo-100 tracking-tight">
               {t("login.logo")}
             </span>
           </Link>
         </div>
 
         {/* Login Form */}
-        <div className="bg-white/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-8">
+        <div className="bg-black/80 backdrop-blur-xl rounded-2xl border border-indigo-900 shadow-2xl p-8">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-indigo-100 mb-2">
               {t("login.welcomeBack")}
             </h1>
-            <p className="text-gray-600">{t("login.signInToAccount")}</p>
+            <p className="text-indigo-300">{t("login.signInToAccount")}</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -56,7 +56,7 @@ export default function LoginPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-indigo-200 mb-2"
               >
                 {t("login.emailLabel")}
               </label>
@@ -67,7 +67,7 @@ export default function LoginPage() {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                className="w-full px-4 py-3 border border-indigo-800 rounded-md focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-200 bg-black/60 text-indigo-100 placeholder-indigo-400"
                 placeholder={String(t("login.emailPlaceholder"))}
               />
             </div>
@@ -76,7 +76,7 @@ export default function LoginPage() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-indigo-200 mb-2"
               >
                 {t("login.passwordLabel")}
               </label>
@@ -87,7 +87,7 @@ export default function LoginPage() {
                 value={formData.password}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                className="w-full px-4 py-3 border border-indigo-800 rounded-md focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-200 bg-black/60 text-indigo-100 placeholder-indigo-400"
                 placeholder={String(t("login.passwordPlaceholder"))}
               />
             </div>
@@ -101,18 +101,18 @@ export default function LoginPage() {
                   name="rememberMe"
                   checked={formData.rememberMe}
                   onChange={handleInputChange}
-                  className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-indigo-500 focus:ring-indigo-400 border-indigo-800 rounded bg-black"
                 />
                 <label
                   htmlFor="rememberMe"
-                  className="ml-2 block text-sm text-gray-700"
+                  className="ml-2 block text-sm text-indigo-200"
                 >
                   {t("login.rememberMe")}
                 </label>
               </div>
               <a
                 href="#"
-                className="text-sm text-purple-600 hover:text-purple-500 transition-colors"
+                className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
               >
                 {t("login.forgotPassword")}
               </a>
@@ -121,7 +121,7 @@ export default function LoginPage() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-500 text-white py-3 px-4 rounded-md font-medium shadow-lg hover:from-purple-700 hover:to-purple-600 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-indigo-700 to-indigo-500 text-white py-3 px-4 rounded-md font-medium shadow-lg hover:from-indigo-800 hover:to-indigo-700 transition-all duration-200 hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {t("login.signIn")}
             </button>
@@ -129,16 +129,16 @@ export default function LoginPage() {
 
           {/* Divider */}
           <div className="mt-8 flex items-center">
-            <div className="flex-1 border-t border-gray-300"></div>
-            <span className="px-4 text-sm text-gray-500">
+            <div className="flex-1 border-t border-indigo-900"></div>
+            <span className="px-4 text-sm text-indigo-400">
               {t("login.orContinueWith")}
             </span>
-            <div className="flex-1 border-t border-gray-300"></div>
+            <div className="flex-1 border-t border-indigo-900"></div>
           </div>
 
           {/* Social Login */}
           <div className="mt-6 grid grid-cols-2 gap-3">
-            <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white/50 backdrop-blur-sm hover:bg-gray-50 transition-all duration-200">
+            <button className="flex items-center justify-center px-4 py-3 border border-indigo-800 rounded-md shadow-sm text-sm font-medium text-indigo-200 bg-black/60 hover:bg-indigo-900 transition-all duration-200">
               <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                 <path
                   fill="#4285F4"
@@ -159,7 +159,7 @@ export default function LoginPage() {
               </svg>
               {t("login.google")}
             </button>
-            <button className="flex items-center justify-center px-4 py-3 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white/50 backdrop-blur-sm hover:bg-gray-50 transition-all duration-200">
+            <button className="flex items-center justify-center px-4 py-3 border border-indigo-800 rounded-md shadow-sm text-sm font-medium text-indigo-200 bg-black/60 hover:bg-indigo-900 transition-all duration-200">
               <svg
                 className="w-5 h-5 mr-2"
                 fill="currentColor"
@@ -173,11 +173,11 @@ export default function LoginPage() {
 
           {/* Sign Up Link */}
           <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-indigo-300">
               {t("login.noAccount")}{" "}
               <a
                 href="#"
-                className="text-purple-600 hover:text-purple-500 font-medium transition-colors"
+                className="text-indigo-400 hover:text-indigo-200 font-medium transition-colors"
               >
                 {t("login.signUpForFree")}
               </a>
@@ -189,7 +189,7 @@ export default function LoginPage() {
         <div className="text-center mt-6">
           <Link
             href="/"
-            className="text-sm text-gray-600 hover:text-purple-600 transition-colors inline-flex items-center"
+            className="text-sm text-indigo-400 hover:text-indigo-200 transition-colors inline-flex items-center"
           >
             <svg
               className="w-4 h-4 mr-2"

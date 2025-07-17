@@ -7,9 +7,9 @@ export default function Footer() {
   const { t } = useLocalization();
 
   return (
-    <div className="relative bg-black">
+    <div className="relative bg-gradient-to-br from-black via-gray-950 to-indigo-950 ">
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-black via-gray-950 to-indigo-950 relative overflow-hidden">
+      <section className="bg-transparent relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0">
           {/* Decorative lines and shapes */}
@@ -33,12 +33,14 @@ export default function Footer() {
 
         <div className="relative z-10 text-gray-100 py-20 px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-normal mb-6 leading-tight text-white">
-            {t("footer.callToAction.heading").split("\n").map((line: string, idx: number) => (
-              <React.Fragment key={idx}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
+            {String(t("footer.callToAction.heading"))
+              .split("\n")
+              .map((line: string, idx: number) => (
+                <React.Fragment key={idx}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
           </h2>
           <p className="mb-10 text-lg text-gray-300">
             {t("footer.callToAction.subheading")}
@@ -70,15 +72,19 @@ export default function Footer() {
                       <div className="w-10 h-10 bg-indigo-700 rounded-lg flex items-center justify-center mr-3">
                         <span className="text-white font-bold text-lg">C</span>
                       </div>
-                      <span className="text-gray-100 text-2xl font-bold">{t("footer.logo")}</span>
+                      <span className="text-gray-100 text-2xl font-bold">
+                        {t("footer.logo")}
+                      </span>
                     </div>
                     <p className="text-gray-400 text-lg leading-relaxed">
-                      {t("footer.tagline").split("\n").map((line: string, idx: number) => (
-                        <React.Fragment key={idx}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
+                      {String(t("footer.tagline"))
+                        .split("\n")
+                        .map((line: string, idx: number) => (
+                          <React.Fragment key={idx}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                     </p>
                   </div>
 
@@ -87,37 +93,64 @@ export default function Footer() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {/* Features */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.features")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">
+                          {t("footer.features")}
+                        </h4>
                         <ul className="space-y-3 text-sm">
-                          {t("footer.featuresList").map((item: string, idx: number) => (
-                            <li key={idx}>
-                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
-                            </li>
-                          ))}
+                          {(t("footer.featuresList") as string[]).map(
+                            (item: string, idx: number) => (
+                              <li key={idx}>
+                                <a
+                                  href="#"
+                                  className="text-gray-400 hover:text-indigo-400 transition-colors"
+                                >
+                                  {item}
+                                </a>
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
 
                       {/* Company */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.company")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">
+                          {t("footer.company")}
+                        </h4>
                         <ul className="space-y-3 text-sm">
-                          {t("footer.companyList").map((item: string, idx: number) => (
-                            <li key={idx}>
-                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
-                            </li>
-                          ))}
+                          {(t("footer.companyList") as string[]).map(
+                            (item: string, idx: number) => (
+                              <li key={idx}>
+                                <a
+                                  href="#"
+                                  className="text-gray-400 hover:text-indigo-400 transition-colors"
+                                >
+                                  {item}
+                                </a>
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
 
                       {/* Stay in touch */}
                       <div>
-                        <h4 className="font-semibold mb-4 text-gray-100">{t("footer.stayInTouch")}</h4>
+                        <h4 className="font-semibold mb-4 text-gray-100">
+                          {t("footer.stayInTouch")}
+                        </h4>
                         <ul className="space-y-3 text-sm">
-                          {t("footer.stayInTouchList").map((item: string, idx: number) => (
-                            <li key={idx}>
-                              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">{item}</a>
-                            </li>
-                          ))}
+                          {(t("footer.stayInTouchList") as string[]).map(
+                            (item: string, idx: number) => (
+                              <li key={idx}>
+                                <a
+                                  href="#"
+                                  className="text-gray-400 hover:text-indigo-400 transition-colors"
+                                >
+                                  {item}
+                                </a>
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -130,8 +163,18 @@ export default function Footer() {
                     {t("footer.copyright")}
                   </div>
                   <div className="flex gap-6 text-sm">
-                    <a href="#" className="text-gray-500 hover:text-indigo-400 transition-colors">{t("footer.privacyPolicy")}</a>
-                    <a href="#" className="text-gray-500 hover:text-indigo-400 transition-colors">{t("footer.termsAndCondition")}</a>
+                    <a
+                      href="#"
+                      className="text-gray-500 hover:text-indigo-400 transition-colors"
+                    >
+                      {t("footer.privacyPolicy")}
+                    </a>
+                    <a
+                      href="#"
+                      className="text-gray-500 hover:text-indigo-400 transition-colors"
+                    >
+                      {t("footer.termsAndCondition")}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -144,3 +187,4 @@ export default function Footer() {
       </footer>
     </div>
   );
+}

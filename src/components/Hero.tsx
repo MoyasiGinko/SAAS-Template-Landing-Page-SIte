@@ -7,7 +7,7 @@ import { useLocalization } from "../lib/LocalizationProvider";
 export default function Hero() {
   const { t } = useLocalization();
   return (
-    <section className="bg-gradient-to-b from-black via-gray-950 to-indigo-950 pt-16 pb-12 px-4 border-b border-indigo-900">
+    <section className="pt-16 pb-12 px-4  bg-transparent">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Headline and CTA */}
         <div className="text-center max-w-2xl mx-auto">
@@ -42,17 +42,17 @@ export default function Hero() {
           </button>
         </div>
         {/* UI Mockup Section */}
-        <div className="relative w-full max-w-7xl mt-1 flex flex-col items-center">
+        <div className="relative w-full max-w-7xl mt-10 flex flex-col items-center">
           {/* Simple background grid dots SVG */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <div className="absolute bg-transparent inset-0 w-full h-full pointer-events-none">
             {/* Grid dots background */}
             <div
-              className="absolute inset-0 w-full h-full"
+              className="absolute bg-transparent inset-0 w-full h-full"
               style={{
                 backgroundImage: "url('/grid-dots.svg')",
                 backgroundRepeat: "repeat",
                 backgroundPosition: "center",
-                opacity: 0.15,
+                opacity: 0.5,
                 filter: "invert(0)",
                 zIndex: 0,
               }}
@@ -61,8 +61,7 @@ export default function Hero() {
             <div
               className="absolute left-0 top-0 h-full w-[40%] z-10"
               style={{
-                background:
-                  "linear-gradient(to right, #111 5%, transparent 100%)",
+                background: "linear-gradient(to top, transparent, transparent)",
                 pointerEvents: "none",
               }}
             />
@@ -71,7 +70,7 @@ export default function Hero() {
               className="absolute right-0 top-0 h-full w-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to left, #111 5%, transparent 100%)",
+                  "linear-gradient(to left, transparent, transparent)",
                 pointerEvents: "none",
               }}
             />
@@ -80,7 +79,7 @@ export default function Hero() {
               className="absolute top-0 left-0 w-full h-[40%] z-10"
               style={{
                 background:
-                  "linear-gradient(to bottom, #111 5%, transparent 100%)",
+                  "linear-gradient(to bottom, transparent, transparent)",
                 pointerEvents: "none",
               }}
             />
@@ -88,8 +87,7 @@ export default function Hero() {
             <div
               className="absolute bottom-0 left-0 w-full h-[40%] z-10"
               style={{
-                background:
-                  "linear-gradient(to top, #111 5%, transparent 100%)",
+                background: "linear-gradient(to top, transparent, transparent)",
                 pointerEvents: "none",
               }}
             />
@@ -97,7 +95,7 @@ export default function Hero() {
           <div className="relative z-10 w-full flex justify-center">
             <div className="rounded-2xl overflow-hidden bg-transparent max-w-7xl w-full aspect-[16/9] flex items-center justify-center">
               <Image
-                src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif"
+                src="https://i.pinimg.com/originals/bb/37/5c/bb375cdd655184ca2715ac5059e73651.gif"
                 alt={String(t("hero.imageAlt"))}
                 width={1200}
                 height={675}

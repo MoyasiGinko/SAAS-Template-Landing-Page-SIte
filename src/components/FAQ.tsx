@@ -17,7 +17,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+    <section className="w-full bg-transparent">
       <div className="py-20 bg-transparent px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:space-x-16">
           <div className="md:w-1/2">

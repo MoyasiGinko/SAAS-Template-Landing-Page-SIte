@@ -168,7 +168,7 @@ export default function ContentSectionOne() {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+    <section className="py-16 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         <div className="relative bg-gradient-to-r from-indigo-950 to-gray-900 rounded-3xl overflow-hidden">
           {/* Animated purple background fill - vibrant purple sweeping animation */}

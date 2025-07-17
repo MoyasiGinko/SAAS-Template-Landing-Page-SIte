@@ -103,7 +103,7 @@ export default function Pricing() {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header with extra top spacing */}
         <div className="text-center mb-12 pt-8">

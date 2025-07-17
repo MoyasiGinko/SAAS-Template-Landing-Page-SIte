@@ -6,7 +6,7 @@ import { useLocalization } from "../lib/LocalizationProvider";
 export default function ComplianceSection() {
   const { t } = useLocalization();
   return (
-    <section className="py-16 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+    <section className="py-16 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-12">
           {/* Left Content */}

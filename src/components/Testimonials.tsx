@@ -98,7 +98,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black via-gray-950 to-indigo-950">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header Section */}
         <div className="mb-16">
