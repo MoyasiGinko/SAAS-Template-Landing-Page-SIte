@@ -35,12 +35,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-indigo-900 to-purple-900 rounded-md flex items-center justify-center shadow-lg">
-            <span className="font-bold text-lg text-indigo-200">C</span>
-          </div>
-          <span className="font-bold text-2xl text-indigo-100 tracking-tight">
-            {t("header.logo")}
-          </span>
+          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
         </div>
 
         {/* Desktop Navigation */}
