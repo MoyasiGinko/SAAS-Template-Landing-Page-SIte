@@ -1,0 +1,286 @@
+{
+  "login": {
+    "logo": "CREATIVE",
+    "welcomeBack": "Welcome back",
+    "signInToAccount": "Sign in to your CREATIVE account",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "orContinueWith": "Or continue with",
+    "google": "Google",
+    "github": "GitHub",
+    "noAccount": "Don't have an account?",
+    "signUpForFree": "Sign up for free",
+    "backToHome": "Back to home"
+  },
+  "scheduleDemo": {
+    "logo": "CREATIVE",
+    "title": "Schedule Your Personal Demo",
+    "subtitle": "See how CREATIVE can transform your customer insights and accelerate your business growth.",
+    "sessionTitle": "30-minute personalized session",
+    "sessionDesc": "Get a tailored walkthrough of CREATIVE's features specific to your business needs.",
+    "dataTitle": "Live data insights",
+    "dataDesc": "See real examples of how CREATIVE analyzes customer data and provides actionable insights.",
+    "qaTitle": "Q&A with experts",
+    "qaDesc": "Ask questions and get expert advice on implementing CREATIVE in your workflow.",
+    "integrationTitle": "Custom integration plan",
+    "integrationDesc": "Receive a personalized roadmap for integrating CREATIVE with your existing tools.",
+    "firstNameLabel": "First Name *",
+    "firstNamePlaceholder": "John",
+    "lastNameLabel": "Last Name *",
+    "lastNamePlaceholder": "Doe",
+    "emailLabel": "Work Email *",
+    "emailPlaceholder": "john@company.com",
+    "companyLabel": "Company *",
+    "companyPlaceholder": "Acme Inc.",
+    "jobTitleLabel": "Job Title *",
+    "jobTitlePlaceholder": "CEO",
+    "companySizeLabel": "Company Size *",
+    "companySizePlaceholder": "Select size",
+    "companySize1": "1-10 employees",
+    "companySize2": "11-50 employees",
+    "companySize3": "51-200 employees",
+    "companySize4": "201-1000 employees",
+    "companySize5": "1000+ employees",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+1 (555) 123-4567",
+    "preferredDateLabel": "Preferred Date",
+    "preferredTimeLabel": "Preferred Time",
+    "preferredTimePlaceholder": "Select time",
+    "time1": "9:00 AM",
+    "time2": "10:00 AM",
+    "time3": "11:00 AM",
+    "time4": "2:00 PM",
+    "time5": "3:00 PM",
+    "time6": "4:00 PM",
+    "messageLabel": "Tell us about your needs (optional)",
+    "messagePlaceholder": "What challenges are you hoping CREATIVE can help solve?",
+    "submit": "Schedule Demo",
+    "terms1": "By submitting this form, you agree to our",
+    "privacyPolicy": "Privacy Policy",
+    "terms2": "and",
+    "termsOfService": "Terms of Service",
+    "backToHome": "Back to home"
+  },
+  "header": {
+    "logo": "CREATIVE",
+    "navigation": {
+      "home": "Home",
+      "features": "Features",
+      "solutions": "Solutions",
+      "resources": "Resources",
+      "pricing": "Pricing"
+    },
+    "actions": {
+      "login": "Log In",
+      "scheduleDemo": "Schedule A Demo"
+    }
+  },
+  "footer": {
+    "callToAction": {
+      "heading": "Know More, Act Faster And\nClose Smarter.",
+      "subheading": "AI-powered clarity for every stage of your customer journey",
+      "getStarted": "Get Started",
+      "scheduleDemo": "Schedule A Demo"
+    },
+    "logo": "CREATIVE",
+    "tagline": "Every Customer Insights,\nIntelligently Handled",
+    "features": "Features",
+    "company": "Company",
+    "stayInTouch": "Stay in touch",
+    "featuresList": [
+      "CREATIVE feed",
+      "Smart summary",
+      "Pulse Score",
+      "Touchpoint Reminder",
+      "CREATIVE Snapshot"
+    ],
+    "companyList": ["About us", "Careers", "Contact Us", "Feature"],
+    "stayInTouchList": ["Instagram", "Facebook", "Twitter", "Youtube"],
+    "copyright": "Copyright 2025. All rights reserved by CREATIVE",
+    "privacyPolicy": "Privacy policy",
+    "termsAndCondition": "Terms and condition"
+  },
+
+  "hero": {
+    "badge": "Instant CRM AI Tools",
+    "headline": "Every Customer Insights,\nIntelligently Handled",
+    "description": "Give your team the clarity, context, and speed they need to deliver extraordinary experiences — at every touchpoint",
+    "getStarted": "Get Started",
+    "imageAlt": "Product demo"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "5M+ users and still counting",
+    "description": "Start free and upgrade anytime as your team and projects grow",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save20": "Save 20%",
+    "plans": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "description": "For personal",
+        "price": "0",
+        "period": "per month",
+        "features": [
+          "2 User Seat Only",
+          "Basic Activity Feed (7-Day History)",
+          "AI Smart Summary (Limited Context)",
+          "Basic Email Tracking"
+        ],
+        "buttonText": "Free Access"
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "description": "For growing teams",
+        "price": "9",
+        "period": "per month",
+        "features": [
+          "Up To 10 Users",
+          "Smart Summary + Pulse Score",
+          "Touchpoint Reminder",
+          "Outreach Sequence"
+        ],
+        "buttonText": "Get Started"
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "description": "For multi-user teams",
+        "price": "29",
+        "period": "per month",
+        "features": [
+          "Unlimited Users",
+          "CREATIVE Snapshot",
+          "AI Suggestion Engine",
+          "Advanced Scheduling Assistant"
+        ],
+        "buttonText": "Get Started",
+        "badge": "Users best choice !"
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "description": "For large teams",
+        "price": "Custom",
+        "period": "per month",
+        "features": [
+          "Fields & Data Model",
+          "Various Integrations",
+          "Custom Insight AI Training",
+          "SLA, Onboarding, And Permissions"
+        ],
+        "buttonText": "Talk to sales"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "heading": "Everything You’re Wondering, Answered.",
+    "message": "Couldn’t Find Something? ",
+    "messageLink": "Message Us",
+    "questions": [
+      {
+        "question": "How is CREATIVE different from other CRMs",
+        "answer": "CREATIVE doesn’t just store data—it understands it. From summarizing customer interactions to suggesting next steps, CREATIVE is like a co-pilot that helps you move faster with more confidence."
+      },
+      {
+        "question": "Can CREATIVE help my team save time?",
+        "answer": "Yes, CREATIVE automates routine tasks and provides AI-powered insights to help your team focus on what matters most."
+      },
+      {
+        "question": "Is CREATIVE hard to set up?",
+        "answer": "No, CREATIVE is designed for easy integration and quick setup with your existing tools and workflows."
+      },
+      {
+        "question": "What tools does CREATIVE integrate with?",
+        "answer": "CREATIVE integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
+      }
+    ]
+  },
+  "contentSectionOne": {
+    "heading1": "The AI Workforce",
+    "heading2": "humans can lean",
+    "heading3": "on.",
+    "description": "Never quits, and always improves. Scale to meet any demand.",
+    "moreAboutCREATIVE": "More about CREATIVE",
+    "imageAlt": "Two people discussing"
+  },
+  "complianceSection": {
+    "heading1": "CREATIVE meets the highest industry benchmarks—",
+    "heading2": "so your data grows safely with you.",
+    "getStarted": "Get Started",
+    "gdpr": "GDPR",
+    "iso": "ISO 27001",
+    "ccpa": "CCPA"
+  },
+  "contentSections": {
+    "card1": {
+      "title": "Automated Schedule",
+      "description": "Streamline Your Daily Planning with Smart, Automated Scheduling Tools."
+    },
+    "card2": {
+      "title": "Every record, enriched",
+      "description": "From fundraising and location to revenue, employee count, LinkedIn profiles, and more."
+    },
+    "card3": {
+      "title": "Powered by Data Connected",
+      "description": "See all the relevant data about your customer as you interact with them."
+    },
+    "readMore": "Read more"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "heading": "Honest review from best users",
+    "subheading": "Our users are our best ambassadors, discover why we're the top choice",
+    "readCaseStudy": "Read case study",
+    "items": [
+      {
+        "id": 1,
+        "company": "PLEX",
+        "website": "plex.co",
+        "title": "Insight on autopilot.",
+        "description": "Sales and CS now act with clarity—no more digging through activity logs.",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 2,
+        "company": "FARFETCH",
+        "website": "farfetch.io",
+        "title": "Context without Chaos.",
+        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 3,
+        "company": "max",
+        "website": "max.ai",
+        "title": "One-click smarter.",
+        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 4,
+        "company": "FARFETCH",
+        "website": "farfetch.io",
+        "title": "Context without Chaos.",
+        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
+      },
+      {
+        "id": 5,
+        "company": "max",
+        "website": "max.ai",
+        "title": "One-click smarter.",
+        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
+      }
+    ]
+  }
+}
