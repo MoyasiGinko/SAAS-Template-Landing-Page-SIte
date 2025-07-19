@@ -1,8 +1,14 @@
 import { useTranslation } from "react-i18next";
 
+type LegalSectionType = {
+  privacyPolicy: { title: string; content: string };
+  termsAndConditions: { title: string; content: string };
+  disclaimer: { title: string; content: string };
+};
+
 export default function LegalSection() {
   const { t } = useTranslation();
-  const legal = t("legal", { returnObjects: true }) as any;
+  const legal = t("legal", { returnObjects: true }) as LegalSectionType;
   return (
     <section>
       <h1>{legal.privacyPolicy.title}</h1>

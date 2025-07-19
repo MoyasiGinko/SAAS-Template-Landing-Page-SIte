@@ -1,8 +1,15 @@
 import { useTranslation } from "react-i18next";
 
+type Careers = {
+  title: string;
+  intro: string;
+  howToApply: string;
+  currentOpenings: string;
+};
+
 export default function CareersSection() {
   const { t } = useTranslation();
-  const careers = t("careers", { returnObjects: true }) as any;
+  const careers = t("careers", { returnObjects: true }) as Careers;
   return (
     <section>
       <h1>{careers.title}</h1>

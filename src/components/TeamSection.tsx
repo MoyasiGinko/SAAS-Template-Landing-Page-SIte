@@ -1,8 +1,14 @@
 import { useTranslation } from "react-i18next";
 
+type Team = {
+  title: string;
+  intro: string;
+  certifications: string[];
+};
+
 export default function TeamSection() {
   const { t } = useTranslation();
-  const team = t("team", { returnObjects: true }) as any;
+  const team = t("team", { returnObjects: true }) as Team;
   return (
     <section>
       <h1>{team.title}</h1>

@@ -18,6 +18,7 @@ export default function Testimonials() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
@@ -25,7 +26,7 @@ export default function Testimonials() {
   // Get number of visible cards based on screen size
   const getVisibleCards = () => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1024) return 3; // lg: 3 cards
+      if (window.innerWidth >= 1280) return 3; // xl: 3 cards
       if (window.innerWidth >= 768) return 2; // md: 2 cards
       return 1; // sm: 1 card
     }
@@ -38,7 +39,7 @@ export default function Testimonials() {
   useEffect(() => {
     const handleResize = () => {
       setVisibleCards(getVisibleCards());
-      setCurrentIndex(0); // Reset to first slide on resize
+      setCurrentIndex(0);
     };
 
     window.addEventListener("resize", handleResize);
@@ -52,10 +53,10 @@ export default function Testimonials() {
     const maxIndex = Math.max(0, testimonials.length - visibleCards);
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, visibleCards]);
+  }, [isAutoPlaying, visibleCards, testimonials.length]);
 
   const maxIndex = Math.max(0, testimonials.length - visibleCards);
 
@@ -98,68 +99,54 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-transparent">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-24 bg-transparent relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "3s" }}
+        ></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <div className="mb-16">
-          <div className="flex items-center mb-6">
-            <div className="bg-indigo-900 text-indigo-200 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              <div className="w-2 h-2 bg-indigo-400 rounded-full mr-2"></div>
-              {t("testimonials.badge")}
+        <div className="text-center mb-20">
+          {/* Badge */}
+          <div className="inline-flex items-center space-x-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-full px-6 py-3 mb-8">
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full animate-pulse"></div>
+              <div
+                className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: "1s" }}
+              ></div>
             </div>
+            <span className="text-slate-300 font-medium">
+              {t("testimonials.badge")}
+            </span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-            <div className="lg:w-2/3">
-              <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4 leading-tight">
-                {t("testimonials.heading")}
-              </h2>
-              <p className="text-gray-300 text-lg">
-                {t("testimonials.subheading")}
-              </p>
-            </div>
+          {/* Main Heading */}
+          <h2 className="text-5xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            <span className="relative">
+              {t("testimonials.heading")}
+              <div className="absolute -inset-x-4 -inset-y-2 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 blur-2xl rounded-lg -z-10"></div>
+            </span>
+          </h2>
 
-            {/* Navigation Buttons */}
-            <div className="flex space-x-2 mt-6 lg:mt-0">
-              <button
-                onClick={prevTestimonial}
-                className="w-10 h-10 bg-gray-900 hover:bg-indigo-900 rounded-full flex items-center justify-center transition-colors duration-200 border border-indigo-800"
-                aria-label="Previous testimonial"
-              >
-                <svg
-                  className="w-5 h-5 text-indigo-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="w-10 h-10 bg-indigo-900 hover:bg-indigo-800 rounded-full flex items-center justify-center transition-colors duration-200 border border-indigo-800"
-                aria-label="Next testimonial"
-              >
-                <svg
-                  className="w-5 h-5 text-indigo-100"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
+          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            {t("testimonials.subheading")}
+          </p>
+
+          {/* Decorative Line */}
+          <div className="flex items-center justify-center mt-8">
+            <div className="w-32 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+            <div className="w-2 h-2 bg-purple-400 rounded-full mx-4"></div>
+            <div className="w-32 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
           </div>
         </div>
 
@@ -169,10 +156,10 @@ export default function Testimonials() {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          <div className="overflow-hidden">
+          <div className="overflow-hidden rounded-3xl">
             <div
               ref={carouselRef}
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-700 ease-out"
               style={{
                 transform: `translateX(-${
                   (currentIndex * 100) / visibleCards
@@ -183,83 +170,212 @@ export default function Testimonials() {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {testimonials.map((testimonial) => (
+              {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className="px-3"
+                  className="px-4"
                   style={{ width: `${100 / testimonials.length}%` }}
+                  onMouseEnter={() => setHoveredCard(testimonial.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <div className="bg-black/80 rounded-2xl overflow-hidden border border-indigo-900 hover:shadow-xl transition-shadow duration-300 h-full">
-                    {/* Team Image */}
-                    <div className="aspect-[4/3] overflow-hidden">
+                  <div
+                    className={`group relative bg-slate-900/40 backdrop-blur-xl border border-slate-700/30 rounded-3xl overflow-hidden transition-all duration-500 h-full ${
+                      hoveredCard === testimonial.id
+                        ? "transform scale-105 shadow-2xl shadow-purple-500/10"
+                        : ""
+                    }`}
+                  >
+                    {/* Gradient Border Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+
+                    {/* Image Section */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10"></div>
                       <Image
                         src={testimonial.image}
                         alt={String(testimonial.company)}
-                        width={300}
-                        height={225}
-                        className="w-full h-full object-cover"
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                    </div>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="mb-4">
-                        <h3 className="text-2xl font-bold text-indigo-100 mb-1">
-                          {testimonial.company}
-                        </h3>
-                        <p className="text-sm text-indigo-300">
-                          {testimonial.website}
-                        </p>
+                      {/* Floating Badge */}
+                      <div className="absolute top-6 left-6 z-20">
+                        <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-600/30 rounded-2xl px-4 py-2">
+                          <div className="text-sm font-bold text-white">
+                            {testimonial.company}
+                          </div>
+                          <div className="text-xs text-slate-400">
+                            {testimonial.website}
+                          </div>
+                        </div>
                       </div>
 
-                      <h4 className="text-lg font-semibold text-indigo-200 mb-3">
-                        {testimonial.title}
-                      </h4>
-
-                      <p className="text-indigo-300 mb-6 leading-relaxed">
-                        {testimonial.description}
-                      </p>
-
-                      <a
-                        href="#"
-                        className="inline-flex items-center text-indigo-200 font-medium hover:text-indigo-400 transition-colors duration-200 group"
-                      >
-                        {t("testimonials.readCaseStudy")}
-                        <svg
-                          className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </a>
+                      {/* Quote Icon */}
+                      <div className="absolute bottom-6 right-6 z-20">
+                        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
+
+                    {/* Content Section */}
+                    <div className="p-8 relative z-10">
+                      <div className="space-y-6">
+                        <h4 className="text-xl font-bold text-white leading-tight">
+                          {testimonial.title}
+                        </h4>
+
+                        <p className="text-slate-300 leading-relaxed text-lg">
+                          "{testimonial.description}"
+                        </p>
+
+                        {/* Rating Stars */}
+                        <div className="flex space-x-1">
+                          {[...Array(5)].map((_, i) => (
+                            <svg
+                              key={i}
+                              className="w-5 h-5 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                          ))}
+                        </div>
+
+                        {/* CTA Button */}
+                        <button className="group/btn flex items-center space-x-2 text-slate-400 hover:text-white transition-all duration-300">
+                          <span className="font-medium">
+                            {t("testimonials.readCaseStudy")}
+                          </span>
+                          <div className="w-6 h-6 rounded-full bg-slate-700 group-hover/btn:bg-purple-500 transition-all duration-300 flex items-center justify-center">
+                            <svg
+                              className="w-3 h-3 transform group-hover/btn:translate-x-0.5 transition-transform duration-300"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000 ease-out"></div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Navigation Arrows */}
-          {/* ...existing code... */}
+          {/* Navigation Buttons */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between pointer-events-none z-20">
+            <button
+              onClick={prevTestimonial}
+              className="pointer-events-auto w-14 h-14 bg-slate-800/80 backdrop-blur-sm border border-slate-600/30 hover:bg-slate-700/80 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg"
+              aria-label="Previous testimonial"
+            >
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="pointer-events-auto w-14 h-14 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 rounded-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-purple-500/25"
+              aria-label="Next testimonial"
+            >
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="mt-12 max-w-md mx-auto">
+          <div className="flex items-center justify-between mb-4">
+            <span className="text-sm text-slate-400">
+              {currentIndex + 1} of {maxIndex + 1}
+            </span>
+            <div className="flex space-x-2">
+              <button
+                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                className="text-slate-400 hover:text-white transition-colors duration-200"
+              >
+                {isAutoPlaying ? (
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+
+          <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-700 ease-out rounded-full"
+              style={{
+                width: `${((currentIndex + 1) / (maxIndex + 1)) * 100}%`,
+              }}
+            ></div>
+          </div>
         </div>
 
         {/* Navigation Dots */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-8 space-x-3">
           {Array.from({ length: maxIndex + 1 }, (_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+              className={`transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-indigo-400"
-                  : "bg-indigo-900 hover:bg-indigo-700"
+                  ? "w-8 h-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
+                  : "w-3 h-3 bg-slate-700 hover:bg-slate-600 rounded-full"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

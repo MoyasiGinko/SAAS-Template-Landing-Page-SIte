@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLocalization } from "../lib/LocalizationProvider";
+import Image from "next/image";
 
 export default function Header() {
   const { t, locale, setLocale } = useLocalization();
@@ -35,7 +36,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6 lg:px-8">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10"
+          />
         </div>
 
         {/* Desktop Navigation */}
