@@ -31,7 +31,7 @@ interface PricingCardProps {
 }
 
 // Mock localization and data
-const mockTranslations = {
+const mockTranslations: { [key: string]: string | PricingPlan[] } = {
   "pricing.title": "Pricing",
   "pricing.subtitle": "Choose the perfect plan for your team",
   "pricing.description":
@@ -121,7 +121,10 @@ const mockTranslations = {
 };
 
 const useLocalization = () => ({
-  t: (key) => mockTranslations[key] || key,
+  t: (key: string) => {
+    const value = mockTranslations[key];
+    return typeof value === "string" ? value : key;
+  },
 });
 
 const getPlanIcon = (planId: string) => {
@@ -142,9 +145,9 @@ const getPlanIcon = (planId: string) => {
 export default function Pricing() {
   const { t } = useLocalization();
   const [isAnnual, setIsAnnual] = useState(false);
-  const pricingPlans: PricingPlan[] = t(
+  const pricingPlans: PricingPlan[] = mockTranslations[
     "pricing.plans"
-  ) as unknown as PricingPlan[];
+  ] as PricingPlan[];
 
   // Enhanced PricingCard component with special design for featured card
   const PricingCard: React.FC<PricingCardProps> = ({

@@ -70,11 +70,6 @@ export default function Testimonials() {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
-  const goToSlide = (index: number) => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(Math.min(index, maxIndex));
-  };
-
   // Touch handlers for mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.targetTouches[0].clientX;
@@ -170,7 +165,7 @@ export default function Testimonials() {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
                   className="px-4"
@@ -181,7 +176,7 @@ export default function Testimonials() {
                   <div
                     className={`group relative bg-slate-900/40 backdrop-blur-xl border border-slate-700/30 rounded-3xl overflow-hidden transition-all duration-500 h-full ${
                       hoveredCard === testimonial.id
-                        ? "transform scale-105 shadow-2xl shadow-purple-500/10"
+                        ? "transform shadow-2xl shadow-purple-500/10"
                         : ""
                     }`}
                   >
@@ -233,7 +228,7 @@ export default function Testimonials() {
                         </h4>
 
                         <p className="text-slate-300 leading-relaxed text-lg">
-                          "{testimonial.description}"
+                          {testimonial.description}
                         </p>
 
                         {/* Rating Stars */}
@@ -322,64 +317,6 @@ export default function Testimonials() {
               </svg>
             </button>
           </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="mt-12 max-w-md mx-auto">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-slate-400">
-              {currentIndex + 1} of {maxIndex + 1}
-            </span>
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className="text-slate-400 hover:text-white transition-colors duration-200"
-              >
-                {isAutoPlaying ? (
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                )}
-              </button>
-            </div>
-          </div>
-
-          <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-purple-500 to-cyan-500 transition-all duration-700 ease-out rounded-full"
-              style={{
-                width: `${((currentIndex + 1) / (maxIndex + 1)) * 100}%`,
-              }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="flex justify-center mt-8 space-x-3">
-          {Array.from({ length: maxIndex + 1 }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 ${
-                index === currentIndex
-                  ? "w-8 h-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
-                  : "w-3 h-3 bg-slate-700 hover:bg-slate-600 rounded-full"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>

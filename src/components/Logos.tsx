@@ -16,12 +16,12 @@ export default function Logos() {
     <section className="py-16 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <p className="text-slate-400 text-sm uppercase tracking-wider font-medium mb-2">
             Trusted by industry leaders
           </p>
           <div className="w-16 h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent mx-auto"></div>
-        </div>
+        </div> */}
 
         {/* Logos Grid */}
         <div className="relative">
@@ -61,59 +61,6 @@ export default function Logos() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Alternative: Infinite scroll version */}
-        <div className="mt-16 relative">
-          <div className="text-center mb-8">
-            <p className="text-slate-500 text-xs uppercase tracking-wider">
-              And many more...
-            </p>
-          </div>
-
-          {/* Scrolling logos */}
-          <div className="relative overflow-hidden">
-            {/* Fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-900/50 to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-900/50 to-transparent z-10"></div>
-
-            <div className="flex space-x-12 animate-scroll">
-              {[...logos, ...logos].map((logo, index) => (
-                <div
-                  key={`scroll-${index}`}
-                  className="flex-shrink-0 flex items-center justify-center py-4"
-                >
-                  <div
-                    className={`text-lg font-bold bg-gradient-to-r ${logo.color} bg-clip-text text-transparent opacity-40 hover:opacity-80 transition-opacity duration-300 whitespace-nowrap`}
-                  >
-                    {logo.name}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Stats section */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="space-y-2">
-            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              500K+
-            </div>
-            <div className="text-slate-400 text-sm">Active Users</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-              99.9%
-            </div>
-            <div className="text-slate-400 text-sm">Uptime SLA</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              150+
-            </div>
-            <div className="text-slate-400 text-sm">Countries</div>
           </div>
         </div>
       </div>

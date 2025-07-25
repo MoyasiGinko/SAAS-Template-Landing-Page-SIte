@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import { ChevronDown, MessageCircleQuestion, ExternalLink } from "lucide-react";
 
 // Mock localization function for demo
-const mockTranslations = {
+const mockTranslations: {
+  [key: string]: string | { question: string; answer: string }[];
+} = {
   "faq.title": "FAQ",
   "faq.heading": "Frequently Asked Questions",
   "faq.message": "Can't find what you're looking for?",
@@ -39,14 +41,17 @@ const mockTranslations = {
 };
 
 const useLocalization = () => ({
-  t: (key) => mockTranslations[key] || key,
+  t: (key: string) => {
+    const value = mockTranslations[key];
+    return typeof value === "string" ? value : key;
+  },
 });
 
 export default function FAQ() {
   const { t } = useLocalization();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = t("faq.questions") as unknown as {
+  const faqs = mockTranslations["faq.questions"] as {
     question: string;
     answer: string;
   }[];

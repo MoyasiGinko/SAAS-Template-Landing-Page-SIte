@@ -3,17 +3,18 @@
 import React from "react";
 
 // Mock localization function for demo
-const mockTranslations = {
-  "complianceSection.heading1": "Enterprise-grade",
-  "complianceSection.heading2": "security & compliance",
-  "complianceSection.getStarted": "Start Your Journey",
-  "complianceSection.gdpr": "GDPR",
-  "complianceSection.iso": "ISO 27001",
-  "complianceSection.ccpa": "CCPA",
+const mockTranslations: { [key: string]: string } = {
+  "complianceSection.heading1": "Enterprise-Grade Compliance & Security",
+  "complianceSection.heading2":
+    "Built for Trust, Privacy, and Global Standards",
+  "complianceSection.getStarted": "Get Started",
+  "complianceSection.gdpr": "GDPR Compliant",
+  "complianceSection.iso": "ISO 27001 Certified",
+  "complianceSection.ccpa": "CCPA Ready",
 };
 
 const useLocalization = () => ({
-  t: (key) => mockTranslations[key] || key,
+  t: (key: string) => mockTranslations[key] || key,
 });
 
 export default function ComplianceSection() {
@@ -210,22 +211,6 @@ export default function ComplianceSection() {
                 {t("complianceSection.ccpa")}
               </span>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom Trust Indicators */}
-        <div className="flex items-center justify-center gap-8 mt-12 pt-8 border-t border-slate-800/30">
-          <div className="flex items-center gap-2 text-slate-400 text-sm">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-            <span>99.9% Uptime</span>
-          </div>
-          <div className="flex items-center gap-2 text-slate-400 text-sm">
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
-            <span>24/7 Monitoring</span>
-          </div>
-          <div className="flex items-center gap-2 text-slate-400 text-sm">
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-            <span>SOC 2 Certified</span>
           </div>
         </div>
       </div>
