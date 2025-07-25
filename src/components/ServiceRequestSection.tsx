@@ -1,8 +1,25 @@
 import { useTranslation } from "react-i18next";
 
+interface ServiceRequestForm {
+  fullName: string;
+  email: string;
+  phone: string;
+  serviceType: string;
+  message: string;
+  submit: string;
+}
+
+interface ServiceRequestTranslation {
+  title: string;
+  intro: string;
+  form: ServiceRequestForm;
+}
+
 export default function ServiceRequestSection() {
   const { t } = useTranslation();
-  const sr = t("serviceRequest", { returnObjects: true }) as any;
+  const sr = t("serviceRequest", {
+    returnObjects: true,
+  }) as ServiceRequestTranslation;
   const form = sr.form || {};
   return (
     <section>

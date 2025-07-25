@@ -1,8 +1,26 @@
 import { useTranslation } from "react-i18next";
 
+interface ContactForm {
+  fullName: string;
+  email: string;
+  phone: string;
+  serviceType: string;
+  message: string;
+  submit: string;
+}
+
+interface Contact {
+  title: string;
+  address: string;
+  phone: string;
+  email: string;
+  workingHours: string;
+  form: ContactForm;
+}
+
 export default function ContactSection() {
   const { t } = useTranslation();
-  const contact = t("contact", { returnObjects: true }) as any;
+  const contact = t("contact", { returnObjects: true }) as Contact;
   const form = contact.form || {};
   return (
     <section>

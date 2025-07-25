@@ -55,7 +55,7 @@ export default function Testimonials() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, visibleCards]);
+  }, [isAutoPlaying, visibleCards, testimonials.length]);
 
   const maxIndex = Math.max(0, testimonials.length - visibleCards);
 

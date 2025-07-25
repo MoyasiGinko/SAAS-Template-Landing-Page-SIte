@@ -1,8 +1,16 @@
 import { useTranslation } from "react-i18next";
 
+interface AboutContent {
+  title: string;
+  companyProfile: string;
+  vision: string;
+  mission: string;
+  values: string[];
+}
+
 export default function AboutSection() {
   const { t } = useTranslation();
-  const about = t("about", { returnObjects: true }) as any;
+  const about = t("about", { returnObjects: true }) as AboutContent;
   return (
     <section>
       <h1>{about.title}</h1>
