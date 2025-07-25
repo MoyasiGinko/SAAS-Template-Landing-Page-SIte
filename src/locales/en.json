@@ -1,8 +1,8 @@
 {
   "login": {
-    "logo": "CREATIVE",
+    "logo": "Al-Watad",
     "welcomeBack": "Welcome back",
-    "signInToAccount": "Sign in to your CREATIVE account",
+    "signInToAccount": "Sign in to your Al-Watad account",
     "emailLabel": "Email address",
     "emailPlaceholder": "Enter your email",
     "passwordLabel": "Password",
@@ -18,17 +18,17 @@
     "backToHome": "Back to home"
   },
   "scheduleDemo": {
-    "logo": "CREATIVE",
+    "logo": "Al-Watad",
     "title": "Schedule Your Personal Demo",
-    "subtitle": "See how CREATIVE can transform your customer insights and accelerate your business growth.",
+    "subtitle": "Discover how Al-Watad can enhance your digital presence and accelerate your business growth.",
     "sessionTitle": "30-minute personalized session",
-    "sessionDesc": "Get a tailored walkthrough of CREATIVE's features specific to your business needs.",
+    "sessionDesc": "A tailored walkthrough of Al-Watad's features for your needs.",
     "dataTitle": "Live data insights",
-    "dataDesc": "See real examples of how CREATIVE analyzes customer data and provides actionable insights.",
+    "dataDesc": "See real examples of how Al-Watad analyzes customer data and provides actionable insights.",
     "qaTitle": "Q&A with experts",
-    "qaDesc": "Ask questions and get expert advice on implementing CREATIVE in your workflow.",
+    "qaDesc": "Ask questions and get expert advice on implementing Al-Watad solutions in your workflow.",
     "integrationTitle": "Custom integration plan",
-    "integrationDesc": "Receive a personalized roadmap for integrating CREATIVE with your existing tools.",
+    "integrationDesc": "Get a personalized roadmap for integrating Al-Watad solutions with your existing tools.",
     "firstNameLabel": "First Name *",
     "firstNamePlaceholder": "John",
     "lastNameLabel": "Last Name *",
@@ -36,7 +36,7 @@
     "emailLabel": "Work Email *",
     "emailPlaceholder": "john@company.com",
     "companyLabel": "Company *",
-    "companyPlaceholder": "Acme Inc.",
+    "companyPlaceholder": "Al-Watad",
     "jobTitleLabel": "Job Title *",
     "jobTitlePlaceholder": "CEO",
     "companySizeLabel": "Company Size *",
@@ -47,7 +47,7 @@
     "companySize4": "201-1000 employees",
     "companySize5": "1000+ employees",
     "phoneLabel": "Phone Number",
-    "phonePlaceholder": "+1 (555) 123-4567",
+    "phonePlaceholder": "+964 770 111 1112",
     "preferredDateLabel": "Preferred Date",
     "preferredTimeLabel": "Preferred Time",
     "preferredTimePlaceholder": "Select time",
@@ -58,7 +58,7 @@
     "time5": "3:00 PM",
     "time6": "4:00 PM",
     "messageLabel": "Tell us about your needs (optional)",
-    "messagePlaceholder": "What challenges are you hoping CREATIVE can help solve?",
+    "messagePlaceholder": "What challenges are you hoping Al-Watad can help solve?",
     "submit": "Schedule Demo",
     "terms1": "By submitting this form, you agree to our",
     "privacyPolicy": "Privacy Policy",
@@ -67,154 +67,166 @@
     "backToHome": "Back to home"
   },
   "header": {
-    "logo": "CREATIVE",
+    "logo": "Al-Watad",
     "navigation": {
       "home": "Home",
-      "features": "Features",
-      "solutions": "Solutions",
-      "resources": "Resources",
-      "pricing": "Pricing"
+      "features": "Services",
+      "solutions": "Our Team",
+      "resources": "About Us",
+      "pricing": "Careers"
     },
     "actions": {
       "login": "Log In",
-      "scheduleDemo": "Schedule A Demo"
+      "scheduleDemo": "Contact Us"
     }
   },
   "footer": {
     "callToAction": {
-      "heading": "Know More, Act Faster And\nClose Smarter.",
-      "subheading": "AI-powered clarity for every stage of your customer journey",
+      "heading": "From securing your data… to managing your digital presence — everything starts here.",
+      "subheading": "Smart, integrated solutions for every stage of your digital journey",
       "getStarted": "Get Started",
-      "scheduleDemo": "Schedule A Demo"
+      "scheduleDemo": "Book a Consultation"
     },
-    "logo": "CREATIVE",
-    "tagline": "Every Customer Insights,\nIntelligently Handled",
-    "features": "Features",
+    "logo": "Al-Watad",
+    "tagline": "All your digital solutions, Professionally managed",
+    "features": "Services",
     "company": "Company",
     "stayInTouch": "Stay in touch",
     "featuresList": [
-      "CREATIVE feed",
-      "Smart summary",
-      "Pulse Score",
-      "Touchpoint Reminder",
-      "CREATIVE Snapshot"
+      "Internet & Communication Services",
+      "Social Media Management",
+      "Cybersecurity Solutions",
+      "Technical Support & Managed Services",
+      "Digital Transformation & Automation"
     ],
-    "companyList": ["About us", "Careers", "Contact Us", "Feature"],
+    "companyList": ["About Us", "Careers", "Contact Us", "Privacy Policy"],
     "stayInTouchList": ["Instagram", "Facebook", "Twitter", "Youtube"],
-    "copyright": "Copyright 2025. All rights reserved by CREATIVE",
-    "privacyPolicy": "Privacy policy",
-    "termsAndCondition": "Terms and condition"
+    "copyright": "Copyright 2024. All rights reserved by Al-Watad",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndCondition": "Terms & Conditions"
   },
 
   "hero": {
-    "badge": "Instant CRM AI Tools",
-    "headline": "Every Customer Insights,\nIntelligently Handled",
-    "description": "Give your team the clarity, context, and speed they need to deliver extraordinary experiences — at every touchpoint",
+    "badge": "Integrated Digital Solutions",
+    "headline": "From securing your data… to managing your digital presence",
+    "description": "An Iraqi company specialized in delivering smart, integrated solutions in information systems, internet, cybersecurity, and social media management.",
     "getStarted": "Get Started",
-    "imageAlt": "Product demo"
+    "imageAlt": "Al-Watad services demo"
   },
   "pricing": {
-    "title": "Pricing",
-    "subtitle": "5M+ users and still counting",
-    "description": "Start free and upgrade anytime as your team and projects grow",
+    "title": "Packages & Services",
+    "subtitle": "Flexible solutions for every sector",
+    "description": "Choose the package or service that fits your needs, or contact us for a custom solution.",
     "monthly": "Monthly",
     "annual": "Annual",
-    "save20": "Save 20%",
+    "save20": "Save More",
     "plans": [
       {
         "id": "starter",
-        "name": "Starter",
-        "description": "For personal",
-        "price": "0",
-        "period": "per month",
+        "name": "Basic",
+        "description": "Essential services for small businesses and individuals",
+        "price": "On Request",
+        "period": "Monthly",
         "features": [
-          "2 User Seat Only",
-          "Basic Activity Feed (7-Day History)",
-          "AI Smart Summary (Limited Context)",
-          "Basic Email Tracking"
+          "Internet & Communication Services",
+          "Social Media Management",
+          "Basic Technical Support"
         ],
-        "buttonText": "Free Access"
+        "buttonText": "Order Now"
       },
       {
         "id": "growth",
         "name": "Growth",
-        "description": "For growing teams",
-        "price": "9",
-        "period": "per month",
+        "description": "Advanced solutions for medium organizations",
+        "price": "On Request",
+        "period": "Monthly",
         "features": [
-          "Up To 10 Users",
-          "Smart Summary + Pulse Score",
-          "Touchpoint Reminder",
-          "Outreach Sequence"
+          "Cybersecurity Solutions",
+          "Technical Support & Managed Services",
+          "Data Analytics & Dashboards"
         ],
-        "buttonText": "Get Started"
+        "buttonText": "Request Consultation"
       },
       {
         "id": "pro",
-        "name": "Pro",
-        "description": "For multi-user teams",
-        "price": "29",
-        "period": "per month",
+        "name": "Professional",
+        "description": "Comprehensive services for large organizations",
+        "price": "On Request",
+        "period": "Monthly",
         "features": [
-          "Unlimited Users",
-          "CREATIVE Snapshot",
-          "AI Suggestion Engine",
-          "Advanced Scheduling Assistant"
+          "Digital Transformation & Automation",
+          "Data Center Implementation",
+          "Specialized Technology Consulting"
         ],
-        "buttonText": "Get Started",
-        "badge": "Users best choice !"
+        "buttonText": "Contact Us",
+        "badge": "Most Popular"
       },
       {
         "id": "enterprise",
         "name": "Enterprise",
-        "description": "For large teams",
+        "description": "Custom solutions for government and large enterprises",
         "price": "Custom",
-        "period": "per month",
+        "period": "Monthly",
         "features": [
-          "Fields & Data Model",
-          "Various Integrations",
-          "Custom Insight AI Training",
-          "SLA, Onboarding, And Permissions"
+          "Fully tailored solutions",
+          "Advanced training & support",
+          "Service Level Agreements (SLA)"
         ],
-        "buttonText": "Talk to sales"
+        "buttonText": "Get a Quote"
       }
     ]
   },
   "faq": {
     "title": "FAQ",
-    "heading": "Everything You’re Wondering, Answered.",
-    "message": "Couldn’t Find Something? ",
-    "messageLink": "Message Us",
+    "heading": "Everything you want to know about our services.",
+    "message": "Didn't find your question?",
+    "messageLink": "Contact us",
     "questions": [
       {
-        "question": "How is CREATIVE different from other CRMs",
-        "answer": "CREATIVE doesn’t just store data—it understands it. From summarizing customer interactions to suggesting next steps, CREATIVE is like a co-pilot that helps you move faster with more confidence."
+        "question": "What core services does Al-Watad offer?",
+        "answer": "We provide integrated technology solutions, including: enterprise internet and communication services, social media account management and operations, cybersecurity and security auditing, technical support and managed services, digital transformation and process automation, data center implementation, website and smart application design, hosting and email services, data analytics and dashboards, and technology consulting and feasibility studies."
       },
       {
-        "question": "Can CREATIVE help my team save time?",
-        "answer": "Yes, CREATIVE automates routine tasks and provides AI-powered insights to help your team focus on what matters most."
+        "question": "Do you work only with government entities?",
+        "answer": "No, our services are available to both public and private sector clients, including educational institutions, banks, commercial enterprises, and non-profit organizations."
       },
       {
-        "question": "Is CREATIVE hard to set up?",
-        "answer": "No, CREATIVE is designed for easy integration and quick setup with your existing tools and workflows."
+        "question": "Can you provide a customized social media marketing plan?",
+        "answer": "Absolutely. We create tailored monthly marketing plans for each client, covering content development, design, advertising campaigns, posting strategy, and performance analysis."
       },
       {
-        "question": "What tools does CREATIVE integrate with?",
-        "answer": "CREATIVE integrates with a wide range of tools including CRM systems, email platforms, and scheduling software."
+        "question": "How can I request a quote?",
+        "answer": "You can contact us via the Request a Quote form or by email. Just specify the service you’re interested in, and our team will respond within 24 to 48 hours with full details."
+      },
+      {
+        "question": "Do you provide internet services directly?",
+        "answer": "Yes, we offer internet connectivity through various technologies, including: Fiber to the Home/Building (FTTH), Inter-branch connectivity (MPLS / VPN), Wireless networks and SD-WAN solutions."
+      },
+      {
+        "question": "Can I request consultancy services only, without implementation?",
+        "answer": "Yes, we provide specialized consultancy services in cybersecurity, infrastructure, digital transformation, and network analysis. Consultations can be requested independently of implementation."
+      },
+      {
+        "question": "Do you offer 24/7 technical support?",
+        "answer": "Yes, we provide round-the-clock technical support and managed services 7 days a week under clearly defined Service Level Agreements (SLAs) signed with each client."
+      },
+      {
+        "question": "How can I apply for a job at Al-Watad?",
+        "answer": "You can send your CV to: careers@al-watad.iq or visit our Careers page on the website."
       }
     ]
   },
   "contentSectionOne": {
-    "heading1": "The AI Workforce",
-    "heading2": "humans can lean",
-    "heading3": "on.",
-    "description": "Never quits, and always improves. Scale to meet any demand.",
-    "moreAboutCREATIVE": "More about CREATIVE",
-    "imageAlt": "Two people discussing"
+    "heading1": "An Iraqi company specialized",
+    "heading2": "in smart, integrated solutions",
+    "heading3": ".",
+    "description": "We deliver information systems, internet, cybersecurity, and social media management services through expert local teams and global partnerships.",
+    "moreAboutCREATIVE": "More about Al-Watad",
+    "imageAlt": "Al-Watad team photo"
   },
   "complianceSection": {
-    "heading1": "CREATIVE meets the highest industry benchmarks—",
-    "heading2": "so your data grows safely with you.",
+    "heading1": "We adhere to the highest standards of quality and security—",
+    "heading2": "So your data and business grow with confidence.",
     "getStarted": "Get Started",
     "gdpr": "GDPR",
     "iso": "ISO 27001",
@@ -222,65 +234,177 @@
   },
   "contentSections": {
     "card1": {
-      "title": "Automated Schedule",
-      "description": "Streamline Your Daily Planning with Smart, Automated Scheduling Tools."
+      "title": "Internet & Communication Solutions",
+      "description": "Reliable, high-speed connectivity services supporting your business across Iraq."
     },
     "card2": {
-      "title": "Every record, enriched",
-      "description": "From fundraising and location to revenue, employee count, LinkedIn profiles, and more."
+      "title": "Social Media Management",
+      "description": "Build a powerful digital presence and manage campaigns and content across all platforms."
     },
     "card3": {
-      "title": "Powered by Data Connected",
-      "description": "See all the relevant data about your customer as you interact with them."
+      "title": "Cybersecurity Solutions",
+      "description": "Protect your data and systems from digital threats with the latest technologies."
     },
     "readMore": "Read more"
   },
   "testimonials": {
-    "badge": "Testimonials",
-    "heading": "Honest review from best users",
-    "subheading": "Our users are our best ambassadors, discover why we're the top choice",
-    "readCaseStudy": "Read case study",
+    "badge": "Client Testimonials",
+    "heading": "What do our clients say?",
+    "subheading": "Our partners' trust is our success.",
+    "readCaseStudy": "Read more",
     "items": [
       {
         "id": 1,
-        "company": "PLEX",
-        "website": "plex.co",
-        "title": "Insight on autopilot.",
-        "description": "Sales and CS now act with clarity—no more digging through activity logs.",
+        "company": "Ministry of Higher Education",
+        "website": "mohe.gov.iq",
+        "title": "Reliable service.",
+        "description": "We relied on Al-Watad for digital infrastructure development and achieved outstanding results.",
         "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=250&fit=crop&crop=center"
       },
       {
         "id": 2,
-        "company": "FARFETCH",
-        "website": "farfetch.io",
-        "title": "Context without Chaos.",
-        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
+        "company": "International Development Bank",
+        "website": "idb.iq",
+        "title": "Comprehensive technical support.",
+        "description": "The Al-Watad support team is always available and provides effective solutions quickly.",
         "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
       },
       {
         "id": 3,
-        "company": "max",
-        "website": "max.ai",
-        "title": "One-click smarter.",
-        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
-        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
-      },
-      {
-        "id": 4,
-        "company": "FARFETCH",
-        "website": "farfetch.io",
-        "title": "Context without Chaos.",
-        "description": "Why farfetch dropped spreadsheets for CREATIVE's unified customer feed.",
-        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&crop=center"
-      },
-      {
-        "id": 5,
-        "company": "max",
-        "website": "max.ai",
-        "title": "One-click smarter.",
-        "description": "We scaled without increasing team size using CREATIVE's predictive nudges.",
+        "company": "ITC Company",
+        "website": "itc.iq",
+        "title": "Advanced cybersecurity solutions.",
+        "description": "Al-Watad helped us protect our data and develop institutional security policies.",
         "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop&crop=center"
       }
     ]
+  },
+  "about": {
+    "title": "About Al-Watad",
+    "companyProfile": "Al-Watad is an Iraqi company specialized in delivering smart, integrated solutions across information systems, internet technologies, cybersecurity, social media management, and digital infrastructure services. We operate through expert teams and skilled local professionals, working in collaboration with world-class technology partners. Our mission is to provide high-quality, future-ready services that empower our clients—both in the public and private sectors—to strengthen their digital presence, protect their technical environment, and grow with confidence in an ever-evolving digital world.",
+    "vision": "Driven by excellence in execution, service quality, operational performance, and competitive pricing, Al-Watad aims to expand its client base and become the preferred choice in the fields of information systems, telecommunication technologies, internet services, cybersecurity, and social media management by the year 2030.",
+    "mission": "Our mission is to meet client requirements precisely as designed and planned—while offering consultative insight based on a deep understanding of their needs. We provide neutral, technically sound solutions throughout the entire project lifecycle, ensuring full alignment with objectives.",
+    "values": [
+      "Client-Centric Focus",
+      "Excellence Through Quality",
+      "Customer Satisfaction",
+      "Collaboration & Accountability",
+      "Total Commitment",
+      "Integrity in Execution",
+      "Trust & Transparency",
+      "Leadership Through Youth & Innovation",
+      "Credibility & Partnership"
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Internet & Communication Services",
+        "description": "Reliable enterprise internet and communication services, including dedicated internet access, MPLS, SD-WAN, VPN, and more."
+      },
+      {
+        "title": "Social Media Management",
+        "description": "Strategic planning, content creation, campaign management, and analytics for all major platforms."
+      },
+      {
+        "title": "Cybersecurity Solutions",
+        "description": "Comprehensive cybersecurity services: defense, penetration testing, vulnerability assessment, secure code review, and consulting."
+      },
+      {
+        "title": "Technical Support & Managed Services",
+        "description": "24/7 technical support, managed IT services, system and network management, and performance reporting."
+      },
+      {
+        "title": "Digital Transformation & Automation",
+        "description": "Workflow automation, digital transformation roadmaps, smart analytics, and self-service platforms."
+      },
+      {
+        "title": "Data Center Implementation",
+        "description": "Design, implementation, and operation of enterprise-grade data centers to the highest international standards."
+      },
+      {
+        "title": "Website & App Development",
+        "description": "Custom website and mobile app design, development, integration, and ongoing support."
+      },
+      {
+        "title": "Hosting & Email Services",
+        "description": "Advanced hosting solutions and enterprise-grade email services, fully managed for security and performance."
+      },
+      {
+        "title": "Data Analytics & Dashboards",
+        "description": "Data integration, interactive dashboards, business intelligence, and predictive analytics."
+      },
+      {
+        "title": "Technology Consulting",
+        "description": "Feasibility studies, technical assessments, RFP documentation, and specialized consulting."
+      }
+    ]
+  },
+  "careers": {
+    "title": "Careers at Al-Watad",
+    "intro": "At Al-Watad, we believe that human talent is the cornerstone of excellence and sustainability in today’s fast-moving world of technology. We’re not just looking for employees — we’re looking for innovators, visionaries, and team players who are passionate about making an impact.",
+    "howToApply": "If you are passionate, skilled, and ready to grow — we’d love to hear from you. Send your CV and a brief cover letter to: careers@al-watad.iq",
+    "currentOpenings": "No current openings, but we always welcome outstanding resumes."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Iraq – Baghdad – Al-Mamoun – District 601",
+    "phone": "+964 770 111 1112 / +964 787 577 5774",
+    "email": "info@al-watad.iq",
+    "careersEmail": "careers@al-watad.iq",
+    "workingHours": "Saturday to Thursday: 8:00 AM – 4:00 PM",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "serviceType": "Type of Service or Inquiry",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "mapEmbed": "Google Maps Embed URL Here"
+  },
+  "legal": {
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "content": "Al-Watad is committed to protecting the privacy of users on its website and safeguarding any personal information shared or collected during your interaction with us. ... (full text from markdown)"
+    },
+    "termsAndConditions": {
+      "title": "Terms & Conditions",
+      "content": "By accessing this website or using any services provided by Al-Watad ... (full text from markdown)"
+    },
+    "disclaimer": {
+      "title": "Legal Disclaimer",
+      "content": "All intellectual property rights associated with this website—including copyrights, trademarks, designs, written and visual content, software, source code, and all digital identity elements—are exclusively owned by Al-Watad ... (full text from markdown)"
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "intro": "At Al-Watad, our team is composed of a dynamic group of experienced Iraqi professionals who specialize in designing, planning, and executing strategic projects for a wide range of clients.",
+    "certifications": [
+      "Project management (PMI, PRINCE2)",
+      "Technical evaluation (APMG)",
+      "Network & data center (Cisco, Schneider)",
+      "Cybersecurity (Cisco, F5, Fortinet, Nokia)",
+      "Fiber optic infrastructure (CommScope)",
+      "Digital content (Google, Adobe)"
+    ]
+  },
+  "caseStudies": {
+    "title": "Case Studies & Success Stories",
+    "intro": "Discover how Al-Watad has helped organizations across Iraq achieve their digital transformation goals.",
+    "items": []
+  },
+  "serviceRequest": {
+    "title": "Request a Quote",
+    "intro": "You can contact us via the Request a Quote form or by email. Just specify the service you’re interested in, and our team will respond within 24 to 48 hours with full details.",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "serviceType": "Type of Service Required",
+      "message": "Message",
+      "submit": "Request Quote"
+    }
   }
 }
